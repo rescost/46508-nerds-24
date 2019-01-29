@@ -28,11 +28,75 @@
 		</div>
 	</header>
 
-	<main class="homepage-content">
+	<main class="catalog-content">
 		<div class="container">
-			<h1>Магазин готовых шаблонов</h1>
+
+		<h1>Магазин готовых шаблонов</h1>
 			
-		</div>	
+		<section class="sidebar-filter">
+			<form action="https://echo.htmlacademy.ru" method="post">
+				<fieldset>
+				<legend>Стоимость:</legend>
+				<!--Ползунок -->
+				</fieldset>
+
+				<fieldset>
+				<legend>Сетка:</legend>
+					<label><input type="radio" name="grid-adaptive" value="adaptive" checked> Адаптивная </label>
+				    <label><input type="radio" name="grid-fixed" value="fixed"> Фиксированная </label>
+	      			<label><input type="radio" name="grid-rubber" value="rubber"> Резиновая </label>
+	      		</fieldset>
+	      		
+	      		<fieldset>
+	      		<legend>Особенности:</legend>
+					<label><input type="checkbox" name="slider" value="prop-slider" checked>Ежедневник</label> 
+					<label><input type="checkbox" name="advantage" value="prop-advantage">Хронометраж</label> 
+					<label><input type="checkbox" name="news" value="prop-news" checked>Свои наработки</label>
+					<label><input type="checkbox" name="gallery" value="prop-gallery">Ежедневник</label> 
+					<label><input type="checkbox" name="cart" value="prop-cart">Хронометраж</label>
+				</fieldset>
+				
+				<input type="button" value="Показать">
+
+			</form>
+		</section>
+
+		<section class="catalog-head-filter">
+
+		</section>
+
+		<section class="catalog-inner">
+				<div class="catalog-item">
+
+				</div>
+				<div class="catalog-item">
+
+				</div>
+				<div class="catalog-item">
+
+				</div>
+				<div class="catalog-item">
+
+				</div>
+				<div class="catalog-item">
+
+				</div>
+				<div class="catalog-item">
+
+				</div>
+
+		</section>
+
+		<nav class="pagination">
+			<ul>
+			<li><a href="#">1</a></li>
+			<li><a href="#">2</a></li>
+			<li><a href="#">3</a></li>
+			<li><a href="#">Следующая</a></li>
+		</nav>
+
+
+	</div>
 	</main>
 	
 	<footer class="site-footer">
