@@ -13,16 +13,16 @@
 				<div class="site-header-logo">
 					<a href="/"><img src="img/nerds-logo.svg" alt="Веб-студия Нёрдс"></a>
 				</div>
-				<div class="site-header-navigation">
+				<nav class="site-header-navigation">
 					<ul>
-						<li>Студия</li>
-						<li>Клиенты</li>
-						<li>Магазин</li>
-						<li>Контакты</li>
+						<li><a href="#">Студия</a></li>
+						<li><a href="#">Клиенты</a></li>
+						<li><a class="current-nav" href="catalog.html">Магазин</a></li>
+						<li><a href="#">Контакты</a></li>
 					</ul>
-				</div>
-				<div class="site-header-basket">
-					<p>Корзина</p>
+				</nav>
+				<div class="cart">
+					<a href="#">Корзина</a>
 				</div>
 			</div>
 		</div>
@@ -66,24 +66,69 @@
 		</section>
 
 		<section class="catalog-inner">
-				<div class="catalog-item">
+			
+			<div class="catalog-item focus"> <!-- focus - открыта форма -->
+				<img src="#" alt="Sedona - информационный сайт для туристов">
+				<div class="catalog-item-info"> <!-- всплывающий блок при наведении, активный -->
+					<h3>Sedona</h3>
+					<p>Информационный сайт для туристов</p>
+					<a class="button" href="#">9 900 руб.</a>
+				</div>	
+			
+			</div>
 
-				</div>
-				<div class="catalog-item">
+			<div class="catalog-item">
+				<img src="#" alt="Pink"> 
+				<div class="catalog-item-info"> <!-- всплывающий блок при наведении, скрытый -->
+					<h3>Pink</h3>
+					<p>???</p>
+					<a class="button" href="#">???</a>
+				</div>	
+			</div>
+			
+			<div class="catalog-item">
+				<img src="#" alt="Borodinski"> 
+				<div class="catalog-item-info"> <!-- всплывающий блок при наведении, скрытый -->
+					<h3>Borodinski</h3>
+					<p>???</p>
+					<a class="button" href="#">???</a>
+				</div>	
+			</div>
 
-				</div>
-				<div class="catalog-item">
+			<div class="catalog-item">
+				<img src="#" alt="Mishka"> 
+				<div class="catalog-item-info"> <!-- всплывающий блок при наведении, скрытый -->
+					<h3>Mishka</h3>
+					<p>???</p>
+					<a class="button" href="#">???</a>
+				</div>	
+			</div>
 
+			<div class="catalog-item">
+				<img src="#" alt="Mishka"> 
+				<div class="catalog-item-info"> <!-- всплывающий блок при наведении, скрытый -->
+					<h3>Mishka</h3>
+					<p>???</p>
+					<a class="button" href="#">???</a>
 				</div>
-				<div class="catalog-item">
+			</div>
+			<div class="catalog-item">
+				<img src="#" alt="Education"> 
+				<div class="catalog-item-info"> <!-- всплывающий блок при наведении, скрытый -->
+					<h3>Education</h3>
+					<p>???</p>
+					<a class="button" href="#">???</a>
+				</div>
+			</div>
 
+			<div class="catalog-item">
+				<img src="#" alt="KVAST"> 
+				<div class="catalog-item-info"> <!-- всплывающий блок при наведении, скрытый -->
+					<h3>KVAST</h3>
+					<p>???</p>
+					<a class="button" href="#">???</a>
 				</div>
-				<div class="catalog-item">
-
-				</div>
-				<div class="catalog-item">
-
-				</div>
+			</div>
 
 		</section>
 
@@ -110,14 +155,16 @@
 					<button type="buton" class="site-footer-map-button">Напишите нам</button>
 				</div>
 			</section>
+			
 			<section class="site-footer-social-icons">
 				<ul>
-					<li>VK</li>
-					<li>FB</li>
-					<li>INS</li>
+					<li><a href="#">VK</a></li>
+					<li><a href="#">FB</a></li>
+					<li><a href="#">INS</a></li>
 				</ul>
 			</section>
-			<section class="site-footer-action">
+			
+			<section class="site-footer-action"> <!-- здесь тоже section, т.к. акция может меняться - логично отделить от социальных иконок -->
 				<p class="strong">Давайте дружить, это выгодно!</p>
 				<p class="faint">Скидка 10% для друзей из социальных сетей</p>
 			</section>	
