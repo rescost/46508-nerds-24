@@ -7,26 +7,23 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
   </head>
   <body>
+	
 	<header class="site-header">
 		<div class="container">
-			<div class="site-header-wrapper">
-				<div class="site-header-logo">
-					<a href="#"><img src="img/nerds-logo.svg" alt="Веб-студия Нёрдс"></a>
-				</div>
-				<nav class="site-header-navigation">
-					<ul>
-						<li><a href="#">Студия</a></li>
-						<li><a href="#">Клиенты</a></li>
-						<li><a class="current-nav" href="catalog.html">Магазин</a></li>
-						<li><a href="#">Контакты</a></li>
-					</ul>
-				</nav>
-				<div class="cart">
-					<ul>
+			<nav class="main-navigation">
+				<a class="site-logo" href="#"><img src="img/img-general/nerds-logo.svg" alt="Веб-студия Нёрдс"></a>
+				
+				<ul class="header-navigation">
+					<li><a href="#">Студия</a></li>
+					<li><a href="#">Клиенты</a></li>
+					<li><a class="current-nav" href="catalog.html">Магазин</a></li>
+					<li><a href="#">Контакты</a></li>
+				</ul>
+				<ul class="basket">
 						<li><a href="#">Корзина</a></li>
-					</ul>
-				</div>
-			</div>
+						<!-- иконка добавлена через ::before -->
+				</ul>
+			</nav>
 		</div>
 	</header>
 
@@ -38,19 +35,26 @@
 					<span>Долго, дорого, скурпулезно</span>
 					<p>Математически выверенный дизайн для вашего сайта или мобильного приложения</p>
 					<a href="#">Узнать больше</a>
+					<img src="img/img-homepage/slide1.jpg" alt="Нёрдс - Долго, дорого, скурпулезно">
 				</div>
 				<div class="homepage-slider-item slider-two">
 					<span>Любим математику как никто другой</span>
 					<p>Никакого креатива, только математические формулы для расчета идеальных пропорций</p>
 					<a href="#">Узнать больше</a>
+					<img src="img/img-homepage/slide2.jpg" alt="Нёрдс - Любим математику, как никто другой">
 				</div>
 				<div class="homepage-slider-item slider-three">
 					<span>Только ночь, только хардкор</span>
 					<p>Работать днём, как все? Мы против этого. Ближе к полуночи работа только начинается.</p>
 					<a href="#">Узнать больше</a>
+					<img src="img/img-homepage/slide3.jpg" alt="Нёрдс - Только ночь, только хардкор">
 				</div>
 				<div class="homepage-slider-nav">
-					<!-- Навигация для слайдера -->
+					<ul>
+						<li><img src="img/img-general/radio-on.svg" alt="активный элемент слайдера"></li>
+						<li><img src="img/img-general/radio-off.svg" alt="неактивный элемент слайдера"></li>
+						<li><img src="img/img-general/radio-off.svg" alt="неактивный элемент слайдера"></li>
+					</ul>	
 				</div>	
 			</section>
 
@@ -59,18 +63,21 @@
 				<h2 class="hidden">Наши услуги</h2>
 				<ul>
 					<li class="our-services-item web-sites">
+						<img src="img/img-homepage/websites.jpg" alt="Мы делаем веб-сайты">
 						<h3>Веб-сайты</h3>
 						<p>Мир никогда не будет прежним после того, как увидит ваш сайт!</p>
 						<a class="button" href="#">Заказать</a>
 					</li>
 
 					<li class="our-services-item apps">
+						<img src="img/img-homepage/utilites.jpg" alt="Мы делаем приложения">
 						<h3>Приложения</h3>
 						<p>Покорите топ-10 приложений в AppStore и Google Play</p>
 						<a class="button" href="#">Заказать</a>
 					</li>
 
 					<li class="our-services-item presentation">
+						<img src="img/img-homepage/presentation.jpg" alt="Мы делаем презентации">
 						<h3>Веб-сайты</h3>
 						<p>Вы даже не подозреваете, насколько вы изумительны!</p>
 						<a class="button" href="#">Заказать</a>
@@ -91,7 +98,8 @@
 					</ul>
 				</div>
 				<div class="our-studio-promo">
-					<img src="#" alt="promo-image" class="promo-image">
+
+					<img src="img/img-homepage/nerds-illustration.png" alt="promo-image" class="promo-image">
 					<p class="promo-head">С 2004 года любим точность во всём:</p>
 					<ul>
 						<li>
@@ -113,10 +121,10 @@
 			<section class="our-partners">
 				<h2 class="hidden">Наши партнеры</h2>
 				<ul>
-					<li><img src="#" alt="Партнер - htmlacademy"></li>
-					<li><img src="#" alt="Партнер - borodinski"></li>
-					<li><img src="#" alt="Партнер - pink"></li>
-					<li><img src="#" alt="Партнер - mishka"></li>
+					<li><img src="img/img-homepage/logo-htmlacademy.png" alt="Партнер - htmlacademy"></li>
+					<li><img src="img/img-homepage/logo-borodinski.png" alt="Партнер - borodinski"></li>
+					<li><img src="img/img-homepage/logo-pink.png" alt="Партнер - pink"></li>
+					<li><img src="img/img-homepage/logo-mishka.png" alt="Партнер - mishka"></li>
 				</ul>	
 			</section>
 			
@@ -132,13 +140,14 @@
 					<p class="faint">191185, Санкт-Петербург, ул.Б.Конюшечная, д.19/8</p>
 					<p class="faint">тел. +7 (812) 275-75-75</p>
 					<button class="site-footer-map-button">Напишите нам</button>
+					<img src="img/img-homepage/map-marker.png"
 				</div>
 			</section>
 			<section class="site-footer-social-icons">
 				<ul>
-					<li><a href="#">VK</a></li>
-					<li><a href="#">FB</a></li>
-					<li><a href="#">INS</a></li>
+					<li class="social-vk"><a href="#"><img src="img/img-general/vk-icon.svg" alt="Мы вконтакте"></a></li>
+					<li class="social-facebook"><a href="#"><img src="img/img-general/fb-icon.svg" alt="Мы вконтакте"></a></a></li>
+					<li class="social-instagramm"><a href="#"><img src="img/img-general/insta-icon.svg" alt="Мы вконтакте"></a></a></li>
 				</ul>
 			</section>
 			<section class="site-footer-action">
