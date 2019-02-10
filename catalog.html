@@ -1,32 +1,30 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
+   <head>
     <meta charset="utf-8">
     <title>Веб-студия "Нёрдс" - долго, дорого, скурпулезно.</title>
+    <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
   </head>
   <body>
+	
 	<header class="site-header">
 		<div class="container">
-			<div class="site-header-wrapper">
-				<div class="site-header-logo">
-					<a href="/"><img src="img/nerds-logo.svg" alt="Веб-студия Нёрдс"></a>
-				</div>
-				<nav class="site-header-navigation">
-					<ul>
-						<li><a href="#">Студия</a></li>
-						<li><a href="#">Клиенты</a></li>
-						<li><a class="current-nav" href="catalog.html">Магазин</a></li>
-						<li><a href="#">Контакты</a></li>
-					</ul>
-				</nav>
-				<div class="cart">
-					<ul>
+			<nav class="main-navigation">
+				<a class="site-logo" href="#"><img src="img/img-general/nerds-logo.svg" alt="Веб-студия Нёрдс"></a>
+				
+				<ul class="header-navigation">
+					<li><a href="#">Студия</a></li>
+					<li><a href="#">Клиенты</a></li>
+					<li><a class="current-nav" href="catalog.html">Магазин</a></li>
+					<li><a href="#">Контакты</a></li>
+				</ul>
+				<ul class="basket">
 						<li><a href="#">Корзина</a></li>
-					</ul>
-				</div>
-			</div>
+						<!-- иконка добавлена через ::before -->
+				</ul>
+			</nav>
 		</div>
 	</header>
 
@@ -36,26 +34,37 @@
 		<h1>Магазин готовых шаблонов</h1>
 			
 		<section class="sidebar-filter">
+			<h2 class="visually-hidden">Фильтр по шаблонам студии Нёрдс</h2>
 			<form action="https://echo.htmlacademy.ru" method="post">
 				<fieldset>
 				<legend>Стоимость:</legend>
-				<!--Ползунок -->
+					<div class="price-filter">
+						<div class="price-bar">
+							<img src="img/img-catalog/filter-button.svg"> <!-- Вставить через css -->
+							<div class="price-bar-min"></div>
+							<div class="price-bar-max"></div>
+						</div>
+						<div class="price-min">От 0</div>
+						<div class="price-max">До 15 000</div>
+					</div>
+				
 				</fieldset>
 
 				<fieldset>
 				<legend>Сетка:</legend>
-					<label><input type="radio" name="grid-adaptive" value="adaptive" checked> Адаптивная </label>
-				    <label><input type="radio" name="grid-fixed" value="fixed"> Фиксированная </label>
+
+					<label><input type="radio" name="grid-adaptive" value="adaptive" checked><img src="img/img-catalog/radio-on.svg"><!--Вставить через css --> Адаптивная </label>
+				    <label><input type="radio" name="grid-fixed" value="fixed"><img src="img/img-catalog/radio-off.svg"><!-- Вставить через css --> Фиксированная </label>
 	      			<label><input type="radio" name="grid-rubber" value="rubber"> Резиновая </label>
 	      		</fieldset>
 	      		
 	      		<fieldset>
 	      		<legend>Особенности:</legend>
-					<label><input type="checkbox" name="slider" value="prop-slider" checked>Ежедневник</label> 
-					<label><input type="checkbox" name="advantage" value="prop-advantage">Хронометраж</label> 
-					<label><input type="checkbox" name="news" value="prop-news" checked>Свои наработки</label>
-					<label><input type="checkbox" name="gallery" value="prop-gallery">Ежедневник</label> 
-					<label><input type="checkbox" name="cart" value="prop-cart">Хронометраж</label>
+					<label><input type="checkbox" name="slider" value="prop-slider" checked><img src="img/img-catalog/checkbox-on.svg"><!--Вставить через css -->Слайдер</label> 
+					<label><input type="checkbox" name="advantage" value="prop-advantage"><img src="img/img-catalog/checkbox-off.svg"><!-- Вставить через css --> Блок преимуществ</label> 
+					<label><input type="checkbox" name="news" value="prop-news" checked>Новости</label>
+					<label><input type="checkbox" name="gallery" value="prop-gallery">Галерея</label> 
+					<label><input type="checkbox" name="cart" value="prop-cart">Корзина</label>
 				</fieldset>
 				
 				<input type="button" value="Показать">
@@ -64,15 +73,28 @@
 		</section>
 
 		<section class="catalog-head-filter">
+			<h2 class="visually-hidden">Типы сортировки шаблонов студии Нёрдс</h2>
 
+			<p>Сортировать:</p>
+
+			<ul class="type-sort">
+				<li><a class="type-sort-active" href="#">По цене</a></li>
+				<li><a href="#">По типу</a></li>
+				<li><a href="#">По названию</a></li>
+			</ul>
+			<ul class="">
+				<li><a class="sort-swither-down active" href="#">Вниз</a> <img src="img/img-catalog/icon-down-dir.svg"><!--Вставить через css --> </li>
+				<li><a class="sort-swither-up" href="#">Вверх</a><img src="img/img-catalog/icon-up-dir.svg"> <!-- Вставить через css --></li>
+			</ul>
 		</section>
 
 		<section class="catalog-inner">
 			<h2 class="hidden">Примеры готовых шаблонов</h2>
 			
-			<ul>
+			<ul class="catalog-template">
 			<li class="catalog-item focus"> <!-- focus - открыта форма -->
-				<img src="#" alt="Sedona - информационный сайт для туристов">
+				<img src="img/img-catalog/img-sedona.jpg" alt="Sedona - информационный сайт для туристов">
+				
 				<div class="catalog-item-info"> <!-- всплывающий блок при наведении, активный -->
 					<h3>Sedona</h3>
 					<p>Информационный сайт для туристов</p>
@@ -82,7 +104,7 @@
 			</li>
 
 			<li class="catalog-item">
-				<img src="#" alt="Pink"> 
+				<img src="img/img-catalog/img-pink.jpg" alt="Pink"> 
 				<div class="catalog-item-info"> <!-- всплывающий блок при наведении, скрытый -->
 					<h3>Pink</h3>
 					<p>???</p>
@@ -91,16 +113,16 @@
 			</li>
 			
 			<li class="catalog-item">
-				<img src="#" alt="Borodinski"> 
+				<img src="img/img-catalog/img-barbershop.jpg" alt="Barbershop Borodinski"> 
 				<div class="catalog-item-info"> <!-- всплывающий блок при наведении, скрытый -->
-					<h3>Borodinski</h3>
+					<h3>Barbershop Borodinski</h3>
 					<p>???</p>
 					<a class="button" href="#">???</a>
 				</div>	
 			</li>
 
 			<li class="catalog-item">
-				<img src="#" alt="Mishka"> 
+				<img src="img/img-catalog/img-mishka.jpg" alt="Mishka"> 
 				<div class="catalog-item-info"> <!-- всплывающий блок при наведении, скрытый -->
 					<h3>Mishka</h3>
 					<p>???</p>
@@ -109,25 +131,16 @@
 			</li>
 
 			<li class="catalog-item">
-				<img src="#" alt="Mishka"> 
+				<img src="img/img-catalog/img-aplus.jpg" alt="A plus"> 
 				<div class="catalog-item-info"> <!-- всплывающий блок при наведении, скрытый -->
-					<h3>Mishka</h3>
+					<h3>A plus</h3>
 					<p>???</p>
 					<a class="button" href="#">???</a>
 				</div>
 			</li>
 
 			<li class="catalog-item">
-				<img src="#" alt="Education"> 
-				<div class="catalog-item-info"> <!-- всплывающий блок при наведении, скрытый -->
-					<h3>Education</h3>
-					<p>???</p>
-					<a class="button" href="#">???</a>
-				</div>
-			</li>
-
-			<li class="catalog-item">
-				<img src="#" alt="KVAST"> 
+				<img src="img/img-catalog/img-kvast.jpg" alt="KVAST"> 
 				<div class="catalog-item-info"> <!-- всплывающий блок при наведении, скрытый -->
 					<h3>KVAST</h3>
 					<p>???</p>
@@ -137,14 +150,16 @@
 			</ul>
 		</section>
 
-		<nav class="pagination">
-			<ul>
-				<li><a href="#">1</a></li>
-				<li><a href="#">2</a></li>
-				<li><a href="#">3</a></li>
-				<li><a href="#">Следующая</a></li>
+		<section class="catalog-navigate">
+			<h2 class="visually-hidden">Навигация по каталогу шаблонов студии Нёрдс</h2>
+			<ul class="catalog-pagination-inner">
+				<li class="catalog-pagination pagination-active"><a href="#">1</a></li>
+				<li class="catalog-pagination"><a href="#">2</a></li>
+				<li class="catalog-pagination"><a href="#">3</a></li>
+				<li class="catalog-pagination pagination-button"><a href="#">Следующая</a></li>
 			</ul>
-		</nav>
+		</section>
+
 
 
 	</div>
@@ -154,23 +169,31 @@
 		<div class="container">
 			
 			<section class="site-footer-map">
+				<img src="img/img-general/footer-map.jpg" alt="Нёрдс на карте">
 				<div class="site-footer-map-contacts">
 					<p class="strong">NЁRDS DESIGN STUDIO</p>
-					<p class="faint">191185, Санкт-Петербург, ул.Б.Конюшечная, д.19/8 </p>
+					<p class="faint">191185, Санкт-Петербург, ул.Б.Конюшечная, д.19/8</p>
 					<p class="faint">тел. +7 (812) 275-75-75</p>
-					<button class="site-footer-map-button"> Напишите нам </button>
+					<button class="site-footer-map-button">Напишите нам</button>
+					<img src="img/img-general/map-marker.png"
 				</div>
 			</section>
-			
-			<section class="site-footer-social-icons">
-				<ul>
-					<li><a href="#">VK</a></li>
-					<li><a href="#">FB</a></li>
-					<li><a href="#">INS</a></li>
+			<section class="social-icons">
+				<h2 class="visually-hidden">Мы в социальных сетях</h2>
+				<ul class="social-icons-container">
+					<li class="social-icon-item sc-vk">
+					<a href="#" title="Страница студии Нёрдс вконтакте"></a>
+					</li>
+					<li class="social-icon-item sc-fb">
+					<a href="#" title="Страница студии Нёрдс на фейсбуке"></a>
+					</li>
+					<li class="social-icon-item sc-insta">
+					<a href="#" title="Старница студии Нёрдс в инстаграмме"></a>
+					</li>
 				</ul>
+
 			</section>
-			
-			<section class="site-footer-action"> <!-- здесь тоже section, т.к. акция может меняться - логично отделить от социальных иконок -->
+			<section class="site-footer-action">
 				<p class="strong">Давайте дружить, это выгодно!</p>
 				<p class="faint">Скидка 10% для друзей из социальных сетей</p>
 			</section>	

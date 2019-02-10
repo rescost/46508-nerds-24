@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Веб-студия "Нёрдс" - долго, дорого, скурпулезно.</title>
+    <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
   </head>
@@ -50,11 +51,11 @@
 					<img src="img/img-homepage/slide3.jpg" alt="Нёрдс - Только ночь, только хардкор">
 				</div>
 				<div class="homepage-slider-nav">
-					<ul>
-						<li><img src="img/img-general/radio-on.svg" alt="активный элемент слайдера"></li>
-						<li><img src="img/img-general/radio-off.svg" alt="неактивный элемент слайдера"></li>
-						<li><img src="img/img-general/radio-off.svg" alt="неактивный элемент слайдера"></li>
-					</ul>	
+					<form>
+						<input type="radio" id="slide1" name="nav-toggle" value="slide1" checked>
+						<input type="radio" id="slide2" name="nav-toggle" value="slide1">
+						<input type="radio" id="slide3" name="nav-toggle" value="slide1">
+					</form>
 				</div>	
 			</section>
 
@@ -135,20 +136,29 @@
 		<div class="container">
 			
 			<section class="site-footer-map">
+				<img src="img/img-general/footer-map.jpg" alt="Нёрдс на карте">
 				<div class="site-footer-map-contacts">
 					<p class="strong">NЁRDS DESIGN STUDIO</p>
 					<p class="faint">191185, Санкт-Петербург, ул.Б.Конюшечная, д.19/8</p>
 					<p class="faint">тел. +7 (812) 275-75-75</p>
 					<button class="site-footer-map-button">Напишите нам</button>
-					<img src="img/img-homepage/map-marker.png"
+					<img src="img/img-general/map-marker.png"
 				</div>
 			</section>
-			<section class="site-footer-social-icons">
-				<ul>
-					<li class="social-vk"><a href="#"><img src="img/img-general/vk-icon.svg" alt="Мы вконтакте"></a></li>
-					<li class="social-facebook"><a href="#"><img src="img/img-general/fb-icon.svg" alt="Мы вконтакте"></a></a></li>
-					<li class="social-instagramm"><a href="#"><img src="img/img-general/insta-icon.svg" alt="Мы вконтакте"></a></a></li>
+			<section class="social-icons">
+				<h2 class="visually-hidden">Мы в социальных сетях</h2>
+				<ul class="social-icons-container">
+					<li class="social-icon-item sc-vk">
+					<a href="#" title="Страница студии Нёрдс вконтакте"></a>
+					</li>
+					<li class="social-icon-item sc-fb">
+					<a href="#" title="Страница студии Нёрдс на фейсбуке"></a>
+					</li>
+					<li class="social-icon-item sc-insta">
+					<a href="#" title="Старница студии Нёрдс в инстаграмме"></a>
+					</li>
 				</ul>
+
 			</section>
 			<section class="site-footer-action">
 				<p class="strong">Давайте дружить, это выгодно!</p>

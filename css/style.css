@@ -21,6 +21,17 @@ p {
 	margin: 0 auto;
 }
 
+.visually-hidden {
+	position: absolute; 
+	width: 1px; (Не 0, потому что 0 - это по сути display:none;)
+	height: 1px;
+	margin: -1px; (компенсирует на всякий случай этот 1px)
+	border: none;
+	padding: 0;
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}
+
 
 
 /* HEADING */
@@ -50,3 +61,99 @@ p {
 	list-style-type: none;
 }
 
+/* Footer styles */
+
+/* Social icons */
+.social-icons-container {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+}
+
+.social-icon-item a {
+  display: flex;
+  width: 79px;
+  height: 79px;
+  position: relative;
+  background-color: #e1e1e1;
+  border-radius: 50%;
+  margin-right: 12px;
+}
+
+.social-icon-item a::before {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.sc-vk a::before {
+  content: url('../img/img-general/vk-icon.svg');
+}
+
+.sc-fb a::before {
+  content: url('../img/img-general/fb-icon.svg');
+}
+
+.sc-insta a::before {
+  content: url('../img/img-general/insta-icon.svg');
+}
+
+.social-icon-item a:hover {
+  background-color: #e74246;
+}
+
+.social-icon-item a:active {
+  background-color: #d7373b;
+  box-shadow: inset 0 3px 0 0 rgba(0,0,0,.1);
+}
+
+.social-icon-item a:active::before {
+  opacity: 0.3;
+}
+
+/* END social icons */
+
+/* Catalog-template */
+
+.catalog-template {
+	list-style-type: none;
+}
+
+
+.catalog-navigate {
+	display: flex;
+}
+
+.catalog-pagination-inner {
+	display: flex;
+	padding: 0;
+	list-style-type: none;
+}
+
+.catalog-pagination {
+	display: flex;
+	justify-content: center;
+    align-items: center;
+	width: 50px;
+	height: 50px;
+	box-sizing: border-box;
+	background-color: #dbdbdb;
+	margin-right: 11px;
+	font-weight: 500;
+	text-transform: uppercase;
+	border-radius: 2px;
+}
+
+.catalog-pagination a {
+	text-decoration: none;
+	color: #000000;
+}
+
+.pagination-active {
+	background-color: #ffffff;
+	border: 3px solid #dbdbdb;
+}
+
+.pagination-button {
+	width: 260px;
+}
