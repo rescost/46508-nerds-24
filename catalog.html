@@ -55,9 +55,9 @@
 				<fieldset>
 				<legend>Сетка:</legend>
 
-					<label><input type="radio" name="grid-adaptive" value="adaptive" checked><!--Вставить через css<img src="img/img-catalog/radio-on.svg"> --> Адаптивная </label>
-				    <label><input type="radio" name="grid-fixed" value="fixed"><!-- Вставить через css<img src="img/img-catalog/radio-off.svg"> --> Фиксированная </label>
-	      			<label><input type="radio" name="grid-rubber" value="rubber"> Резиновая </label>
+					<label><input type="radio" name="grid" value="adaptive" checked><!--Вставить через css<img src="img/img-catalog/radio-on.svg"> --> Адаптивная </label>
+				    <label><input type="radio" name="grid" value="fixed"><!-- Вставить через css<img src="img/img-catalog/radio-off.svg"> --> Фиксированная </label>
+	      			<label><input type="radio" name="grid" value="rubber"> Резиновая </label>
 	      		</fieldset>
 	      		
 	      		<fieldset>
@@ -109,27 +109,30 @@
 			<li class="catalog-item">
 				<img src="img/img-catalog/img-pink.jpg" alt="Pink" width="360" height="576"> 
 				<div class="catalog-item-info"> <!-- всплывающий блок при наведении, скрытый -->
-					<h3>Pink</h3>
-					<p>???</p>
-					<a class="button" href="#">???</a>
+					<h3>Pink App</h3>
+					<p>Продуктовый лендинг приложения для iOs и Android</p>
+					<a class="button" href="#">9 900 руб.</a>
 				</div>	
 			</li>
 			
 			<li class="catalog-item">
 				<img src="img/img-catalog/img-barbershop.jpg" alt="Barbershop Borodinski" width="360" height="576"> 
+				
 				<div class="catalog-item-info"> <!-- всплывающий блок при наведении, скрытый -->
-					<h3>Barbershop Borodinski</h3>
-					<p>???</p>
-					<a class="button" href="#">???</a>
+					<h3>Barbershop</h3>
+					<p>Сайт салона красоты.</p>
+					<p>Для мужчин, да.</p>
+					<a class="button" href="#">9 900 руб.</a>
 				</div>	
+
 			</li>
 
 			<li class="catalog-item">
 				<img src="img/img-catalog/img-mishka.jpg" alt="Mishka" width="360" height="576"> 
 				<div class="catalog-item-info"> <!-- всплывающий блок при наведении, скрытый -->
 					<h3>Mishka</h3>
-					<p>???</p>
-					<a class="button" href="#">???</a>
+					<p>Интернет-магазин вязаных игрушек</p>
+					<a class="button" href="#">9 900 руб.</a>
 				</div>	
 			</li>
 
@@ -137,17 +140,17 @@
 				<img src="img/img-catalog/img-aplus.jpg" alt="A plus" width="360" height="576"> 
 				<div class="catalog-item-info"> <!-- всплывающий блок при наведении, скрытый -->
 					<h3>A plus</h3>
-					<p>???</p>
-					<a class="button" href="#">???</a>
+					<p>Лендинг курсов повышения квалификации</p>
+					<a class="button" href="#">9 900 руб.</a>
 				</div>
 			</li>
 
 			<li class="catalog-item">
 				<img src="img/img-catalog/img-kvast.jpg" alt="KVAST" width="360" height="576"> 
 				<div class="catalog-item-info"> <!-- всплывающий блок при наведении, скрытый -->
-					<h3>KVAST</h3>
-					<p>???</p>
-					<a class="button" href="#">???</a>
+					<h3>КВАСТ</h3>
+					<p>Промо-сайт производителя крафтового кваса</p>
+					<a class="button" href="#">9 900 руб.</a>
 				</div>
 			</li>
 			</ul>
@@ -180,14 +183,25 @@
 					<button class="site-footer-map-button">Напишите нам</button>
 					<img src="img/img-general/map-marker.png" alt="Метка на карте нашей студии" width="231" height="190">
 					
-					<div class="form-write-us">
-					<form>
-						<p>Форма обратной связи</p>
+					<section class="form-write-us">
+					<h2>Напишите нам</h2>
+					<form action="#" method="post">
+						<label for="user-name">Ваше имя</label>
+						<input id="user-name" type="text" name="username" placeholder="Имя Фамилия">
+						
+						<label for="email">Ваш e-mail</label>
+						<input id="email" type="email" name="email-address" placeholder="email@example.com">
+
+						<label for="text-area">Текст письма:</label>
+						<textarea id="text-area" name="text" rows="10" cols="20"></textarea>
+
+						<input type="submit" value="Отправить">
+						
 					</form>
 					<!-- Вставить через css
 					<img src="img/img-general/close-cross.svg">
 					-->
-					</div>
+					</section>
 
 				</div>
 			</section>

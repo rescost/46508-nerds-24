@@ -144,14 +144,25 @@
 					<button class="site-footer-map-button">Напишите нам</button>
 					<img src="img/img-general/map-marker.png" alt="Метка на карте нашей студии" width="231" height="190">
 					
-					<div class="form-write-us">
-					<form>
-						<p>Форма обратной связи</p>
+					<section class="form-write-us">
+					<h2>Напишите нам</h2>
+					<form action="#" method="post">
+						<label for="user-name">Ваше имя</label>
+						<input id="user-name" type="text" name="username" placeholder="Имя Фамилия">
+						
+						<label for="email">Ваш e-mail</label>
+						<input id="email" type="email" name="email-address" placeholder="email@example.com">
+
+						<label for="text-area">Текст письма:</label>
+						<textarea id="text-area" name="text" rows="10" cols="45"></textarea>
+
+						<input type="submit" value="Отправить">
+						
 					</form>
 					<!-- Вставить через css
 					<img src="img/img-general/close-cross.svg">
 					-->
-					</div>
+					</section>
 
 				</div>
 			</section>
