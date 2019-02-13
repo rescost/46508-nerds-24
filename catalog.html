@@ -12,7 +12,8 @@
 	<header class="site-header">
 		<div class="container">
 			<nav class="main-navigation">
-				<a class="site-logo" href="#"><img src="img/img-general/nerds-logo.svg" alt="Веб-студия Нёрдс" width="165" height="65"></a>
+				
+				<a class="site-logo" href="#"><img src="img/img-general/nerds-logo.svg" alt="Веб-студия Нёрдс" width="160" height="65"></a>
 				
 				<ul class="header-navigation">
 					<li><a href="#">Студия</a></li>
@@ -21,19 +22,21 @@
 					<li><a href="#">Контакты</a></li>
 				</ul>
 				<ul class="basket">
-						<li><a href="#">Корзина</a></li>
-						<!-- иконка добавлена через ::before -->
+						<li><a href="#">Корзина</a></li> <!-- Иконка добавлена через :before -->
 				</ul>
 			</nav>
 		</div>
 	</header>
 
-	<main class="catalog-content">
-		<div class="container">
-
+	<main class="catalog-page">
+		
 		<h1>Магазин готовых шаблонов</h1>
-			
-		<section class="sidebar-filter">
+		
+		<div class="container">
+		
+		<div class="catalog-wrapper">
+
+		<section class="catalog-sidebar-filter">
 			<h2 class="visually-hidden">Фильтр по шаблонам студии Нёрдс</h2>
 			<form action="https://echo.htmlacademy.ru" method="post">
 				<fieldset>
@@ -73,12 +76,13 @@
 
 			</form>
 		</section>
-
+		
+		<div class="catalog-content">
 		<section class="catalog-head-filter">
 			<h2 class="visually-hidden">Типы сортировки шаблонов студии Нёрдс</h2>
 
-			<p>Сортировать:</p>
-
+			<span>Сортировать:</span>
+			<div class="head-filter-form">
 			<ul class="type-sort">
 				<li><a class="type-sort-active" href="#">По цене</a></li>
 				<li><a href="#">По типу</a></li>
@@ -88,14 +92,14 @@
 				<li><a class="sort-swither-down active" href="#">Вниз</a><!--Вставить через css <img src="img/img-catalog/icon-down-dir.svg"> --> </li>
 				<li><a class="sort-swither-up" href="#">Вверх</a><!-- Вставить через css<img src="img/img-catalog/icon-up-dir.svg"> --></li>
 			</ul>
+			</div>
 		</section>
 
 		<section class="catalog-inner">
 			<h2 class="hidden">Примеры готовых шаблонов</h2>
 			
 			<ul class="catalog-template">
-			<li class="catalog-item focus"> <!-- focus - открыта форма -->
-				<!-- Вставить через css <img src="img/img-catalog/browser.svg"> -->
+			<li class="focus"> <!-- focus - открыта форма -->
 				<img src="img/img-catalog/img-sedona.jpg" alt="Sedona - информационный сайт для туристов" width="360" height="576">
 				
 				<div class="catalog-item-info"> <!-- всплывающий блок при наведении, активный -->
@@ -106,19 +110,19 @@
 			
 			</li>
 
-			<li class="catalog-item">
+			<li>
 				<img src="img/img-catalog/img-pink.jpg" alt="Pink" width="360" height="576"> 
-				<div class="catalog-item-info"> <!-- всплывающий блок при наведении, скрытый -->
+				<div class="catalog-item-info dispnone"> <!-- всплывающий блок при наведении, скрытый -->
 					<h3>Pink App</h3>
 					<p>Продуктовый лендинг приложения для iOs и Android</p>
 					<a class="button" href="#">9 900 руб.</a>
 				</div>	
 			</li>
 			
-			<li class="catalog-item">
+			<li >
 				<img src="img/img-catalog/img-barbershop.jpg" alt="Barbershop Borodinski" width="360" height="576"> 
 				
-				<div class="catalog-item-info"> <!-- всплывающий блок при наведении, скрытый -->
+				<div class="catalog-item-info dispnone"> <!-- всплывающий блок при наведении, скрытый -->
 					<h3>Barbershop</h3>
 					<p>Сайт салона красоты.</p>
 					<p>Для мужчин, да.</p>
@@ -127,27 +131,27 @@
 
 			</li>
 
-			<li class="catalog-item">
+			<li>
 				<img src="img/img-catalog/img-mishka.jpg" alt="Mishka" width="360" height="576"> 
-				<div class="catalog-item-info"> <!-- всплывающий блок при наведении, скрытый -->
+				<div class="catalog-item-info dispnone"> <!-- всплывающий блок при наведении, скрытый -->
 					<h3>Mishka</h3>
 					<p>Интернет-магазин вязаных игрушек</p>
 					<a class="button" href="#">9 900 руб.</a>
 				</div>	
 			</li>
 
-			<li class="catalog-item">
+			<li>
 				<img src="img/img-catalog/img-aplus.jpg" alt="A plus" width="360" height="576"> 
-				<div class="catalog-item-info"> <!-- всплывающий блок при наведении, скрытый -->
+				<div class="catalog-item-info dispnone"> <!-- всплывающий блок при наведении, скрытый -->
 					<h3>A plus</h3>
 					<p>Лендинг курсов повышения квалификации</p>
 					<a class="button" href="#">9 900 руб.</a>
 				</div>
 			</li>
 
-			<li class="catalog-item">
+			<li>
 				<img src="img/img-catalog/img-kvast.jpg" alt="KVAST" width="360" height="576"> 
-				<div class="catalog-item-info"> <!-- всплывающий блок при наведении, скрытый -->
+				<div class="catalog-item-info dispnone"> <!-- всплывающий блок при наведении, скрытый -->
 					<h3>КВАСТ</h3>
 					<p>Промо-сайт производителя крафтового кваса</p>
 					<a class="button" href="#">9 900 руб.</a>
@@ -165,26 +169,31 @@
 				<li class="catalog-pagination pagination-button"><a href="#">Следующая</a></li>
 			</ul>
 		</section>
+		</div> <!-- catalog-content -->
+
+		</div> <!-- #catalog-wrapper -->
 
 
+		</div> <!-- container -->
 
-	</div>
 	</main>
 	
 	<footer class="site-footer">
-		<div class="container">
 			
 			<section class="site-footer-map">
 				<h2 class="visually-hidden">Наши контакты</h2>
-				<img src="img/img-general/footer-map.jpg" alt="Нёрдс на карте" width="1725" height="808">
+				
 				<div class="site-footer-map-contacts">
+					
+					<div class="our-contacts-block">
 					<p class="strong">NЁRDS DESIGN STUDIO</p>
 					<p class="faint">191185, Санкт-Петербург, ул.Б.Конюшечная, д.19/8</p>
 					<p class="faint">тел. +7 (812) 275-75-75</p>
 					<button class="site-footer-map-button">Напишите нам</button>
-					<img src="img/img-general/map-marker.png" alt="Метка на карте нашей студии" width="231" height="190">
+					</div>
+					<img src="img/img-general/map-marker.png" class="map-maker" alt="Метка на карте нашей студии" width="231" height="190">
 					
-					<section class="form-write-us">
+					<section class="form-write-us dispnone">
 					<h2>Напишите нам</h2>
 					<form action="#" method="post">
 						<label for="user-name">Ваше имя</label>
@@ -206,6 +215,7 @@
 
 				</div>
 			</section>
+			<div class="container footer-contacts">
 			<section class="social-icons">
 				<h2 class="visually-hidden">Мы в социальных сетях</h2>
 				<ul class="social-icons-container">
@@ -223,8 +233,8 @@
 			</section>
 			<section class="site-footer-action">
 				<h2 class="visually-hidden">Скидки для друзей</h2>
-				<p class="strong">Давайте дружить, это выгодно!</p>
-				<p class="faint">Скидка 10% для друзей из социальных сетей</p>
+				<span>Давайте дружить, это выгодно!</span>
+				<p>Скидка 10% для друзей из социальных сетей</p>
 			</section>	
 		</div>
 	</footer>
