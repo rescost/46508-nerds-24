@@ -73,6 +73,10 @@ h1 {
  opacity: 0.8;
 }
 
+.site-logo:active {
+ opacity: 0.3;
+}
+
 .header-navigation {
 	display: flex;
 	width: 440px;
@@ -92,29 +96,44 @@ h1 {
 	color: #000000;
 }
 
+.header-navigation a:hover {
+	color: #fb565a;
+}
+
+.header-navigation a:active {
+	color: #000000;
+	opacity: 0.3;
+}
+
+.current-nav {
+	border-bottom: 2px solid #fb565a;
+	padding: 0 0 10px 0;
+}
+
 .basket {
 	display: flex;
 	justify-content: flex-end;
 	width: 160px;
 	margin: 0;
-	padding: 78px 0 0 0;
+	padding: 75px 0 0 0;
 	list-style-type: none;
 }
 
 .basket a {
 	font-size: 16px;
+	line-height: 30px;
 	font-weight: 500;
 	text-transform: uppercase;
 	color: #000000;
 }
 
-.basket li::before {
+.basket a::before {
 	content: url('../img/img-general/cart-icon.svg');
 	padding-right: 25px;
 	vertical-align: middle;
 }
 
-/* Стадия - главная */
+/* Слайдер - главная */
 
 .slidernavinner {
 	position: relative;
@@ -136,7 +155,7 @@ h1 {
 	width: 380px;
 	padding-top: 70px;
 }
-.slider-description span {
+.slider-description b {
 	font-size: 55px;
 	font-weight: 500;
 	line-height: 55px;
@@ -151,8 +170,49 @@ h1 {
 
 .homepage-slider-nav {
 	position: absolute;
-	bottom: 98px;
+	bottom: 50px;
 }
+
+.homepage-slider-button {
+	width: 240px;
+	height: 50px;
+	display: inline-flex;
+    border-radius: 3px;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 500;
+    color: #fff;
+    background-color: #fb565a;
+}
+
+.homepage-slider-button span {
+	width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.homepage-slider-button span:active {
+	opacity: 0.3;
+}
+
+.homepage-slider-button:hover {
+	background-color: #e74246;
+}
+
+.homepage-slider-button:active {
+	background-color: #d7373b;
+	box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.1);
+
+}
+
+/* Блок наши услуги */
 
 .our-services-inner {
 	display: flex;
@@ -189,11 +249,9 @@ h1 {
 	margin: 0 0 33px 0;
 }
 
-.our-services .button {
+.our-services-item .button {
 	width: 160px;
     height: 50px;
-    background-color: #fb565a;
-    color: #fff;
     display: inline-flex;
     border-radius: 3px;
     justify-content: center;
@@ -202,7 +260,63 @@ h1 {
     font-size: 16px;
     line-height: 18px;
     font-weight: 500;
+    color: #fff;
 }
+
+.our-services-item span {
+	width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.our-services-item span:active {
+	opacity: 0.3;
+}
+
+.web-sites .button {
+	background-color: #fb565a;
+}
+
+.web-sites .button:hover {
+	background-color: #e74246;
+}
+
+.web-sites .button:active {
+	background-color: #d7373b;
+	box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.1);
+}
+
+.apps .button {
+	background-color: #00ca74;
+}
+
+.apps .button:hover {
+	background-color: #00bc6c;
+}
+
+.apps .button:active {
+	background-color: #00aa62;
+	box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.1);
+}
+
+.presentation .button {
+	background-color: #efc84a;
+}
+
+.presentation .button:hover {
+	background-color: #eab534;
+}
+
+.presentation .button:active {
+	background-color: #e5a722;
+	box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.1);
+}
+
+
 
 .our-services hr {
     height: 2px;
@@ -238,6 +352,33 @@ h1 {
 	margin: 40px 0 23px 0;
 }
 
+.our-studio-numbers {
+	display: flex;
+	width: 345px;
+	list-style-type: none;
+	padding: 0;
+	margin-top: 30px;
+	justify-content: space-between;
+}
+
+.our-studio-numbers sup {
+	top: -12px;
+    right: 10px;
+    font-size: 65%;
+}
+
+.our-studio-numbers span {
+	font-size: 45px;
+	line-height: 10.06px;
+	font-weight: bold;
+}
+
+.our-studio-numbers p {
+	font-size: 16px;
+	line-height: 18px;
+	margin-top: 35px;
+}
+
 .we-development {
 	list-style-type: none;
 	padding: 0;
@@ -264,6 +405,7 @@ h1 {
 
 .our-studio-promo span {
 	display: block;
+	margin-top: 29px;
 	text-align: center;
 	text-transform: uppercase;
 	font-weight: bold;
@@ -272,7 +414,7 @@ h1 {
 .our-partners-inner {
 	display: flex;
 	list-style-type: none;
-	padding: 0;
+	padding: 46px 0 48px 0;
 }
 
 .our-partners-inner li {
@@ -282,6 +424,19 @@ h1 {
     align-items: center;
     margin-right: 40px;
 }
+
+.our-partners-inner img {
+	opacity: 0.2;
+}
+
+.our-partners-inner img:hover {
+	opacity: 1;
+}
+
+.our-partners-inner img:active {
+	opacity: 0.1;
+}
+
 
 .our-partners-inner li:last-child {
 	margin-right: 0;
@@ -293,13 +448,23 @@ h1 {
     background-color: #eeeeee;
 }
 
+.our-partners {
+	margin: 77px 0;
+}
+
+/* Карта в подвале */
+
 .site-footer-map {
 	background: url('../img/img-general/footer-map.jpg') center no-repeat;
 	background-color: #eeeeee;
+	
+}
+
+.site-footer-map-contacts {
 	width: 1440px;
 	height: 416px;
-	margin: 0 auto;
 	position: relative;
+	margin: 0 auto;
 }
 
 .map-maker {
@@ -317,6 +482,30 @@ h1 {
 	background-color: #ffffff;
 }
 
+.our-contacts-block .strong {
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 18px;
+	line-height: 30px;
+	padding: 50px 0 0 50px;
+}
+
+.our-contacts-block .faint {
+	color: #666666;
+	font-size: 16px;
+	padding-left: 50px;
+}
+
+.site-footer-map-button {
+	width: 220px;
+	height: 50px;
+	color: #ffffff;
+	background-color: #fb565a;
+	border: none;
+	border-radius: 3px;
+	margin: 30px 0 47px 50px;
+
+}
 
 
 /* Социальные иконки */
@@ -325,7 +514,7 @@ h1 {
   list-style-type: none;
   padding: 0;
   width: 260px;
-  margin-right: 140px;
+  margin: 0 140px 0 0;
 }
 
 .social-icon-item a {
@@ -362,7 +551,7 @@ h1 {
 
 .social-icon-item a:active {
   background-color: #d7373b;
-  box-shadow: inset 0 3px 0 0 rgba(0,0,0,.1);
+  box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.1);
 }
 
 .social-icon-item a:active::before {
@@ -373,7 +562,7 @@ h1 {
 
 .footer-contacts {
 	display: flex;
-	margin-top: 69px;
+	margin: 69px auto;
 }
 
 .site-footer-action span {
