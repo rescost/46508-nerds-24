@@ -22,7 +22,7 @@
 					<li><a href="#">Контакты</a></li>
 				</ul>
 				<ul class="basket">
-						<li><a href="#">Корзина</a></li> <!-- Иконка добавлена через :before -->
+						<li><a href="#">Корзина</a></li>
 				</ul>
 			</nav>
 		</div>
@@ -37,9 +37,8 @@
 					<div class="slider-description">
 						<b>Долго, дорого, скрупулезно.</b>
 						<p>Математически выверенный дизайн <br> для вашего сайта или мобильного приложения</p>
-						<a class="homepage-slider-button" href="#"><span>Узнать больше</span></a>
+						<a class="homepage-slider-button" href="#">Узнать больше</a>
 					</div>
-
 					<img src="img/img-homepage/slide1.png" alt="Нёрдс - Долго, дорого, скурпулезно" width="698" height="413">
 
 				</div>
@@ -47,14 +46,14 @@
 				<div class="homepage-slider-item slider-two dispnone">
 					<b>Любим математику как никто другой</b>
 					<p>Никакого креатива, только математические формулы для расчета идеальных пропорций</p>
-					<a href="#">Узнать больше</a>
+					<a class="homepage-slider-button" href="#">Узнать больше</a>
 					<img src="img/img-homepage/slide2.jpg" alt="Нёрдс - Любим математику, как никто другой" width="663" height="430">
 				</div>
 				
 				<div class="homepage-slider-item slider-three dispnone">
 					<b>Только ночь, только хардкор</b>
 					<p>Работать днём, как все? Мы против этого. Ближе к полуночи работа только начинается.</p>
-					<a href="#">Узнать больше</a>
+					<a class="homepage-slider-button" href="#">Узнать больше</a>
 					<img src="img/img-homepage/slide3.jpg" alt="Нёрдс - Только ночь, только хардкор" width="759" height="411">
 				</div>
 				
@@ -162,26 +161,7 @@
 
 					<img src="img/img-general/map-marker.png" class="map-maker" alt="Метка на карте нашей студии" width="231" height="190">
 					
-					<section class="form-write-us dispnone">
-					<h2>Напишите нам</h2>
-					<form action="#" method="post">
-						<label for="user-name">Ваше имя</label>
-						<input id="user-name" type="text" name="username" placeholder="Имя Фамилия">
-						
-						<label for="email">Ваш e-mail</label>
-						<input id="email" type="email" name="email-address" placeholder="email@example.com">
 
-						<label for="text-area">Текст письма:</label>
-						<textarea id="text-area" name="text" rows="10" cols="45"></textarea>
-
-						<input type="submit" value="Отправить">
-
-						<!-- Вставить через css
-					<img src="img/img-general/close-cross.svg">
-					-->
-					
-					</form>
-					</section>
 				</div>
 			</section>
 			<div class="container footer-contacts">
@@ -206,6 +186,30 @@
 				<p>Скидка 10% для друзей из социальных сетей</p>
 			</section>	
 		</div>
+
+		<section class="form-write-us">
+			<h2>Напишите нам</h2>
+				<form action="#" method="post">
+					<p class="user-name">
+						<label for="user-name">Ваше имя:</label>
+						<input id="user-name" type="text" name="username" placeholder="Имя Фамилия">
+					</p>
+					<p class="email is-invalid">
+						<label for="email">Ваш e-mail:</label>
+						<input id="email" type="email" name="email-address" placeholder="email@example.com">
+					</p>
+					<p class="text-area">
+						<label for="text-area">Текст письма:</label>
+						<textarea id="text-area" name="text" placeholder="В свободной форме" rows="7"></textarea>
+					</p>
+					<p>
+						<input type="submit" value="Отправить">
+					</p>
+					<button type="button" class="button-close" aria-label="Закрыть форму обратной связи">Закрыть форму обратной связи</button>
+				</form>
+		</section>
+
+
 	</footer>
   
 
