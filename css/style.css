@@ -4,7 +4,6 @@
 
 html { 
 	box-sizing: border-box;
-	line-height: 1;
 }
 
 *, *::before, *::after { 
@@ -14,7 +13,10 @@ html {
 body {
 	margin: 0;
 	padding: 0;
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Roboto', Arial, sans-serif;
+	font-size: 16px;
+	line-height: 1;
+	font-weight: 400;
 }
 
 img {
@@ -27,10 +29,8 @@ a {
 }
 
 h1 {
-	font-size: 1.5rem;
+	font-size: 30px;
 }
-
-
 
 .container {
 	width: 1200px;
@@ -53,7 +53,8 @@ h1 {
 	display: none !important;
 }
 
-/* Хедер */
+
+/* ШАПКА САЙТА */
 
 
 .site-header {
@@ -69,7 +70,8 @@ h1 {
 	padding-top: 49px;
 }
 
-.site-logo:hover {
+.site-logo:hover,
+.site-logo:focus {
  opacity: 0.8;
 }
 
@@ -96,7 +98,8 @@ h1 {
 	color: #000000;
 }
 
-.header-navigation a:hover {
+.header-navigation a:hover,
+.header-navigation a:focus {
 	color: #fb565a;
 }
 
@@ -142,60 +145,126 @@ h1 {
 
 /* Слайдер - главная */
 
-.slidernavinner {
+.homepage-slider {
+	background-color: #eeeeee;
 	position: relative;
 }
 
-.homepage-slider {
-	background-color: #eeeeee;
+.slider-list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
 }
 
 .homepage-slider-item {
-	display: flex;
+	display: none;
+	padding: 78px 0 80px 0;
 }
 
-.homepage-slider-item img {
-	padding-top: 10px;
-	margin-left: 50px;
+.homepage-slider-item:nth-child(1) {
+	display: block;
 }
-.slider-description {
-	width: 380px;
-	padding-top: 70px;
+
+.homepage-slider-item:nth-child(1) {
+	background-image: url('../img/img-homepage/slide1.png');
+	background-repeat: no-repeat;
+	background-position: 93% 18px;
 }
-.slider-description b {
+
+.homepage-slider-item:nth-child(2) {
+	background-image: url('../img/img-homepage/slide2.png');
+	background-repeat: no-repeat;
+	background-position: 100% 0;
+}
+
+.homepage-slider-item:nth-child(3) {
+	background-image: url('../img/img-homepage/slide3.png');
+	background-repeat: no-repeat;
+	background-position: 100% 20px;
+}
+
+.homepage-slider-item h3 {
+	max-width: 600px;
+	margin: 0 0 27px 0;
 	font-size: 55px;
 	font-weight: 500;
 	line-height: 55px;
 }
 
-.slider-description p {
-	font-size: 16px;
-    margin-top: 25px;
+.homepage-slider-item p {
+	max-width: 430px;
+    margin: 0 0 38px 0;
     line-height: 24px;
-
 }
 
 .homepage-slider-nav {
 	position: absolute;
-	bottom: 50px;
+	left: 50%;
+	bottom: 104px;
+	z-index: 100;
+	width: 160px;
+	height: 18px;
+	text-align: center;
+	font-size: 0;
+	transform: translateX(-50%);
+}
+
+.homepage-slider-nav i {
+	position: relative;
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    padding: 8px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-sizing: content-box;
+    vertical-align: top;
+}
+
+.homepage-slider-nav i::after {
+  	content: "";
+  	position: absolute;
+	top: 8px;
+ 	left: 8px;
+	z-index: 1;
+	width: 18px;
+  	height: 18px;
+	background: #ffffff;
+ 	border-radius: 50%;
+}
+
+.homepage-slider-nav .active::before {
+	content: "";
+ 	position: absolute;
+	left: 50%;
+	top: 50%;
+	z-index: 2;
+	width: 4px;
+	height: 4px;
+	margin: -4px;
+	background-color: inherit;
+	border: 2px solid #c1c1c1;
+	border-radius: 50%;
 }
 
 .homepage-slider-button {
-	width: 240px;
-	height: 50px;
-	display: inline-flex;
-    border-radius: 3px;
-    justify-content: center;
-    align-items: center;
-    text-transform: uppercase;
+	display: block;
+    width: 240px;
+    padding: 16px 0;
     font-size: 16px;
-    line-height: 18px;
     font-weight: 500;
-    color: #fff;
+    line-height: 18px;
+    color: #ffffff;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
     background-color: #fb565a;
+    border-radius: 3px;
+    border: none;
 }
 
-.homepage-slider-button:hover {
+.homepage-slider-button:hover,
+.homepage-slider-button:focus {
 	background-color: #e74246;
 }
 
@@ -203,10 +272,11 @@ h1 {
 	background-color: #d7373b;
 	color: rgba(255,255,255,0.3);
 	box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.1);
-
 }
 
-/* Блок наши услуги */
+
+/* БЛОК НАШИ УСЛУГИ */
+
 
 .our-services-inner {
 	display: flex;
@@ -257,18 +327,8 @@ h1 {
     color: #fff;
 }
 
-.our-services-item span {
-	width: 100%;
-    height: 100%;
-    margin: 0 auto;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.our-services-item span:active {
-	opacity: 0.3;
+.our-services-item .button:active {
+	color: rgba(256,256,256,0.3);
 }
 
 .web-sites .button {
@@ -498,9 +558,16 @@ h1 {
 	border: none;
 	border-radius: 3px;
 	margin: 30px 0 47px 50px;
-
 }
 
+.site-footer-map-button:hover { /*В стайлгайде нету, но по аналогии с другими */
+	background-color: #e74246;
+}
+
+.site-footer-map-button:active {
+	background-color: #d7373b;
+	color: rgba(256,256,256,0.3);
+}
 
 /* Социальные иконки */
 .social-icons-container {
@@ -609,10 +676,137 @@ h1 {
 
 /* Сайдбар - каталог */
 
+.catalog-price label {
+	font-size: 16px;
+	line-height: 22px;
+	color: #283136;
+	margin-right: 7px;
+	text-transform: uppercase;
+}
+
+.catalog-price input {
+	width: 80px;
+    height: 38px;
+    font-size: 16px;
+    line-height: 22px;
+    color: #283136;
+    border-radius: 5px;
+    border: none;
+    background-color: #eeeeee;
+    text-align: center;
+    margin-right: 32px;
+}
+
+.catalog-price input:last-child {
+	margin-right: 0;
+}
+
+.filter-option {
+  margin-bottom: 15px;
+  padding-left: 35px;
+}
+
+.filter-option label {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  user-select: none;
+  font-size: 16px;
+  line-height: 20px;
+  color: #283136;
+}
+
 .catalog-sidebar-filter fieldset {
 	border: none;
-	margin: 0;
+	margin: 0 0 50px 0;
 	padding: 0;
+}
+
+.filter-input-radio + label::before {
+	content: "";
+	position: absolute;
+	top: -2px;
+	left: -35px;
+	width: 25px;
+	height: 25px;
+	border: none;
+	background-image: url('../img/img-catalog/radio-off.svg');
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	color: #4d4d4d;
+	opacity: 0.4;
+}
+
+.filter-input-radio:checked + label::before {
+	content: "";
+	position: absolute;
+	top: -2px;
+	left: -35px;
+	width: 25px;
+	height: 25px;
+	background-image: url('../img/img-catalog/radio-on.svg');
+	color: #a6a6a6;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	color: #4d4d4d;
+	opacity: 0.4;
+}
+
+.filter-input-checkbox + label::before {
+	content: "";
+	position: absolute;
+	top: -2px;
+	left: -35px;
+	width: 25px;
+	height: 25px;
+	border: none;
+	background-image: url('../img/img-catalog/checkbox-off.svg');
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	color: #4d4d4d;
+	opacity: 0.4;
+}
+
+.filter-input-checkbox:checked + label::before {
+	content: "";
+	position: absolute;
+	top: -2px;
+	left: -35px;
+	width: 25px;
+	height: 25px;
+	background-image: url('../img/img-catalog/checkbox-on.svg');
+	color: #a6a6a6;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	color: #4d4d4d;
+	opacity: 0.4;
+}
+
+.filter-input + label:hover::before {
+	color: #4d4d4d;
+	opacity: 1;
+}
+
+.filter-input:disabled + label {
+	color: rgba(40,49,54,0.3);
+}
+
+.filter-input:disabled + label::before {
+	color: #4d4d4d;
+	opacity: 0.1;
+}
+
+.filter-input:disabled + label:hover::before {
+	color: #4d4d4d;
+	opacity: 1;
+}
+
+.filter-input:disabled + label:hover {
+	color: rgba(40,49,54,1);
+}
+
+.catalog-sidebar-filter fieldset:first-child {
+	margin-bottom: 60px;
 }
 
 .price-filter {
@@ -624,6 +818,17 @@ h1 {
 	line-height: 30px;
 	font-weight: bold;
 	text-transform: uppercase;
+	margin-bottom: 20px;
+}
+
+.catalog-sidebar-filter ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.catalog-price {
+	margin-bottom: 55px;
 }
 
 /* Фильтр в шапке - Каталог */
@@ -654,23 +859,31 @@ h1 {
 	margin: 0;
 }
 
-.type-sort a,
-.type-sort a:before {
+.type-sort a {
 	text-transform: uppercase;
 	font-size: 14px;
 	line-height: 18px;
-	color: #000000;
+	color: rgba(0,0,0,0.3);
+}
+
+.type-sort a:before {
 	opacity: 0.3;
 }
 
-.type-sort a:hover,
+.type-sort a:hover {
+	color: rgba(0,0,0,0.6);
+}
+
 .type-sort a:hover:before {
 	opacity: 0.6;
 }
 
 .type-sort a:active,
+.type-sort .active {
+	color: #000000;
+}
+
 .type-sort a:active:before,
-.type-sort .active,
 .type-sort .active:before {
 	opacity: 1;
 }
@@ -691,9 +904,7 @@ h1 {
 	background-color: #eeeeee;
 	border: none;
 	border-radius: 3px;
-}
 
-.button-filter span {
 	text-transform: uppercase;
 	font-size: 16px;
 	line-height: 18px;
@@ -706,11 +917,10 @@ h1 {
 
 .button-filter:active {
 	box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.1);
+	color: rgba(0,0,0,0.3);
 }
 
-.button-filter:active span {
-	opacity: 0.3;
-}
+
 
 /* Шаблоны - каталог */
 
@@ -858,7 +1068,7 @@ h1 {
 }
 
 .catalog-pagination-inner li:active a{
-	opacity: 0.3;
+	color: rgba(0,0,0,0.3);
 }
 
 .pagination-button a {

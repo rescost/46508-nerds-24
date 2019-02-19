@@ -39,40 +39,59 @@
 		<section class="catalog-sidebar-filter">
 			<h2 class="visually-hidden">Фильтр по шаблонам студии Нёрдс</h2>
 			<form action="#" method="get">
-				<fieldset>
-				<legend>Стоимость:</legend>
-					<div class="price-filter">
-						<div class="price-bar">
-							<!-- Вставить через css
-							<img src="img/img-catalog/filter-button.svg"> 
-							-->
-							<div class="price-bar-min"></div>
-							<div class="price-bar-max"></div>
-						</div>
-						<div class="price-min">От 0</div>
-						<div class="price-max">До 15 000</div>
-					</div>
-				
+				<fieldset class="catalog-price">
+					<legend>Стоимость:</legend>
+						<div class="price-bar"><img src="img/img-catalog/filter-button.svg"></div>
+						<input class="range-style" type="range" min="0" max="100" step="1" value="50">
+
+              			<label for="minprice">от</label> <input type="text" id="minprice" value="0">
+              			<label for="maxprice">до</label> <input type="text" id="maxprice" value="15000">
 				</fieldset>
 
 				<fieldset>
 				<legend>Сетка:</legend>
-
-					<label><input type="radio" name="grid" value="adaptive" checked><!--Вставить через css<img src="img/img-catalog/radio-on.svg"> --> Адаптивная </label>
-				    <label><input type="radio" name="grid" value="fixed"><!-- Вставить через css<img src="img/img-catalog/radio-off.svg"> --> Фиксированная </label>
-	      			<label><input type="radio" name="grid" value="rubber"> Резиновая </label>
+					<ul>
+						<li class="filter-option">
+							<input type="radio" class="visually-hidden filter-input filter-input-radio" name="grid" id="adaptive" checked>
+						    <label for="adaptive">Адаптивная</label>
+						</li>
+						<li class="filter-option">
+						    <input type="radio" class="visually-hidden filter-input filter-input-radio" name="grid" id="fixed">
+						    <label for="fixed">Фиксированная</label>
+		      			</li>
+		      			<li class="filter-option">	
+			      			<input type="radio" class="visually-hidden filter-input filter-input-radio" name="grid" id="rubber" disabled>
+			      			<label for="rubber">Резиновая</label>
+		      			</li>
+					</ul>
 	      		</fieldset>
 	      		
 	      		<fieldset>
 	      		<legend>Особенности:</legend>
-					<label><input type="checkbox" name="slider" value="prop-slider" checked><!--Вставить через css<img src="img/img-catalog/checkbox-on.svg"> -->Слайдер</label> 
-					<label><input type="checkbox" name="advantage" value="prop-advantage"><!-- Вставить через css<img src="img/img-catalog/checkbox-off.svg"> --> Блок преимуществ</label> 
-					<label><input type="checkbox" name="news" value="prop-news" checked>Новости</label>
-					<label><input type="checkbox" name="gallery" value="prop-gallery">Галерея</label> 
-					<label><input type="checkbox" name="cart" value="prop-cart">Корзина</label>
+	      			<ul>
+	      				<li class="filter-option">
+							<input type="checkbox" class="visually-hidden filter-input filter-input-checkbox" name="slider" id="prop-slider" checked>
+							<label for="prop-slider">Слайдер</label>
+						</li>
+						<li class="filter-option">
+							<input type="checkbox" class="visually-hidden filter-input filter-input-checkbox" name="advantage" id="prop-advantages">
+							<label for="prop-advantages">Блок преимуществ</label>
+						</li>
+						<li class="filter-option">
+							<input type="checkbox" class="visually-hidden filter-input filter-input-checkbox" name="news" id="prop-news" checked>
+							<label for="prop-news">Новости</label>
+						<li class="filter-option">
+							<input type="checkbox" class="visually-hidden filter-input filter-input-checkbox" name="gallery" id="prop-gallery">
+							<label for="prop-gallery">Галерея</label>
+						</li>
+						<li class="filter-option">
+							<input type="checkbox" class="visually-hidden filter-input filter-input-checkbox" name="cart" id="prop-basket" disabled>
+							<label for="prop-basket">Корзина</label>
+						</li>
+					</ul>
 				</fieldset>
 				
-				<button type="submit" value="Показать" class="button-filter"><span>Показать</span></button>
+				<button type="submit" value="Показать" class="button-filter">Показать</button>
 
 			</form>
 		</section>
@@ -101,7 +120,7 @@
 			<li class="catalog-item focus">
 				<img src="img/img-catalog/img-sedona.jpg" alt="Sedona - информационный сайт для туристов" width="360" height="576">
 				
-				<div class="catalog-item-info active"> <!-- всплывающий блок при наведении, активный -->
+				<div class="catalog-item-info active">
 					<h3>Sedona</h3>
 					<p>Информационный сайт для туристов</p>
 					<a class="button" href="#">9 900 руб.</a>
@@ -111,7 +130,7 @@
 
 			<li class="catalog-item">
 				<img src="img/img-catalog/img-pink.jpg" alt="Pink" width="360" height="576"> 
-				<div class="catalog-item-info"> <!-- всплывающий блок при наведении, скрытый -->
+				<div class="catalog-item-info">
 					<h3>Pink App</h3>
 					<p>Продуктовый лендинг приложения для iOs и Android</p>
 					<a class="button" href="#">9 900 руб.</a>
@@ -121,7 +140,7 @@
 			<li class="catalog-item">
 				<img src="img/img-catalog/img-barbershop.jpg" alt="Barbershop Borodinski" width="360" height="576"> 
 				
-				<div class="catalog-item-info"> <!-- всплывающий блок при наведении, скрытый -->
+				<div class="catalog-item-info">
 					<h3>Barbershop</h3>
 					<p>Сайт салона красоты.</p>
 					<p>Для мужчин, да.</p>
@@ -132,7 +151,7 @@
 
 			<li class="catalog-item">
 				<img src="img/img-catalog/img-mishka.jpg" alt="Mishka" width="360" height="576"> 
-				<div class="catalog-item-info"> <!-- всплывающий блок при наведении, скрытый -->
+				<div class="catalog-item-info">
 					<h3>Mishka</h3>
 					<p>Интернет-магазин вязаных игрушек</p>
 					<a class="button" href="#">9 900 руб.</a>
@@ -141,7 +160,7 @@
 
 			<li class="catalog-item">
 				<img src="img/img-catalog/img-aplus.jpg" alt="A plus" width="360" height="576"> 
-				<div class="catalog-item-info"> <!-- всплывающий блок при наведении, скрытый -->
+				<div class="catalog-item-info">
 					<h3>A plus</h3>
 					<p>Лендинг курсов повышения квалификации</p>
 					<a class="button" href="#">9 900 руб.</a>
@@ -150,7 +169,7 @@
 
 			<li class="catalog-item">
 				<img src="img/img-catalog/img-kvast.jpg" alt="KVAST" width="360" height="576"> 
-				<div class="catalog-item-info"> <!-- всплывающий блок при наведении, скрытый -->
+				<div class="catalog-item-info">
 					<h3>КВАСТ</h3>
 					<p>Промо-сайт производителя крафтового кваса</p>
 					<a class="button" href="#">9 900 руб.</a>
