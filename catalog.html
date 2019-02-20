@@ -16,9 +16,9 @@
 				<a class="site-logo" href="#"><img src="img/img-general/nerds-logo.svg" alt="Веб-студия Нёрдс" width="160" height="65"></a>
 				
 				<ul class="header-navigation">
-					<li><a class="current-nav" href="index.html">Студия</a></li>
+					<li><a href="index.html">Студия</a></li>
 					<li><a href="#">Клиенты</a></li>
-					<li><a href="catalog.html">Магазин</a></li>
+					<li><a class="current-nav" href="catalog.html">Магазин</a></li>
 					<li><a href="#">Контакты</a></li>
 				</ul>
 				<ul class="basket">
@@ -39,13 +39,22 @@
 		<section class="catalog-sidebar-filter">
 			<h2 class="visually-hidden">Фильтр по шаблонам студии Нёрдс</h2>
 			<form action="#" method="get">
-				<fieldset class="catalog-price">
+				
+				<fieldset class="filter-item">
 					<legend>Стоимость:</legend>
-						<div class="price-bar"><img src="img/img-catalog/filter-button.svg"></div>
-						<input class="range-style" type="range" min="0" max="100" step="1" value="50">
-
-              			<label for="minprice">от</label> <input type="text" id="minprice" value="0">
-              			<label for="maxprice">до</label> <input type="text" id="maxprice" value="15000">
+					 <div class="range-filter">
+				          <div class="range-controls">
+				            <div class="scale">
+				              <div class="bar"></div>
+				            </div>
+				            <div class="toggle toggle-min"></div>
+				            <div class="toggle toggle-max"></div>
+				          </div>
+			          <div class="price-controls">
+			            <label class="min-price">от <input name="min-price" type="text" value="0"></label>
+			            <label class="max-price">до <input name="max-price" type="text" value="15000"></label>
+			          </div>
+        			</div>
 				</fieldset>
 
 				<fieldset>
@@ -85,7 +94,7 @@
 							<label for="prop-gallery">Галерея</label>
 						</li>
 						<li class="filter-option">
-							<input type="checkbox" class="visually-hidden filter-input filter-input-checkbox" name="cart" id="prop-basket" disabled>
+							<input type="checkbox" class="visually-hidden filter-input filter-input-checkbox" name="cart" id="prop-basket" disabled checked>
 							<label for="prop-basket">Корзина</label>
 						</li>
 					</ul>
@@ -180,12 +189,16 @@
 
 		<section class="catalog-navigate">
 			<h2 class="visually-hidden">Навигация по каталогу шаблонов студии Нёрдс</h2>
-			<ul class="catalog-pagination-inner">
-				<li class="pagination-active"><a href="#">1</a></li>
-				<li><a href="#">2</a></li>
-				<li><a href="#">3</a></li>
-				<li class="pagination-button"><a href="#">Следующая</a></li>
+			
+			<ul class="pagination-inner">
+				
+				<li class="pagination-item pagipagination-active"><a href="#">1</a></li>
+				<li class="pagination-item"><a href="#">2</a></li>
+				<li class="pagination-item"><a href="#">3</a></li>
+				<li class="pagination-item pagination-button"><a href="#">Следующая</a></li>
+
 			</ul>
+
 		</section>
 
 		</div> <!-- catalog-content -->
@@ -236,7 +249,7 @@
 			</section>	
 		</div>
 
-		<section class="form-write-us">
+		<section class="form-write-us dispnone">
 			<h2>Напишите нам</h2>
 				<form action="#" method="post">
 					<p class="user-name">
