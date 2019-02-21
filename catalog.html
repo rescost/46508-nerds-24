@@ -52,14 +52,14 @@
 				          </div>
 			          <div class="price-controls">
 			            <label class="min-price">от <input name="min-price" type="text" value="0"></label>
-			            <label class="max-price">до <input name="max-price" type="text" value="15000"></label>
+			            <label class="max-price">до <input name="max-price" type="text" value="15 000"></label>
 			          </div>
         			</div>
 				</fieldset>
 
 				<fieldset>
 				<legend>Сетка:</legend>
-					<ul>
+					<ul class="filter-grid">
 						<li class="filter-option">
 							<input type="radio" class="visually-hidden filter-input filter-input-radio" name="grid" id="adaptive" checked>
 						    <label for="adaptive">Адаптивная</label>
@@ -77,7 +77,7 @@
 	      		
 	      		<fieldset>
 	      		<legend>Особенности:</legend>
-	      			<ul>
+	      			<ul class="filter-grid">
 	      				<li class="filter-option">
 							<input type="checkbox" class="visually-hidden filter-input filter-input-checkbox" name="slider" id="prop-slider" checked>
 							<label for="prop-slider">Слайдер</label>
@@ -111,32 +111,31 @@
 
 			<span>Сортировать:</span>
 			<div class="head-filter-form">
+			
 			<ul class="type-sort">
 				<li><a class="active" href="#">По цене</a></li>
 				<li><a href="#">По типу</a></li>
 				<li><a href="#">По названию</a></li>
-				<li><a class="sort-swither-down active" href="#" aria-label="Сортировка по убыванию"></a> </li>
-				<li><a class="sort-swither-up" href="#" aria-label="Сортировка по возрастанию"></a></li>
 			</ul>
+			<div class="type-sort-switcher">
+				<a class="switcher-down active" href="#" aria-label="Сортировка по убыванию"></a>
+				<a class="switcher-up" href="#" aria-label="Сортировка по возрастанию"></a>
+			</div>
+
 			</div>
 		</section>
 
 		<section class="catalog-inner">
 			<h2 class="visually-hidden">Примеры готовых шаблонов</h2>
-			
 			<ul class="catalog-template">
-			
 			<li class="catalog-item focus">
 				<img src="img/img-catalog/img-sedona.jpg" alt="Sedona - информационный сайт для туристов" width="360" height="576">
-				
 				<div class="catalog-item-info active">
 					<h3>Sedona</h3>
-					<p>Информационный сайт для туристов</p>
+					<p>Информационный сайт <br> для туристов</p>
 					<a class="button" href="#">9 900 руб.</a>
 				</div>	
-			
 			</li>
-
 			<li class="catalog-item">
 				<img src="img/img-catalog/img-pink.jpg" alt="Pink" width="360" height="576"> 
 				<div class="catalog-item-info">
@@ -145,7 +144,6 @@
 					<a class="button" href="#">9 900 руб.</a>
 				</div>	
 			</li>
-			
 			<li class="catalog-item">
 				<img src="img/img-catalog/img-barbershop.jpg" alt="Barbershop Borodinski" width="360" height="576"> 
 				
@@ -157,7 +155,6 @@
 				</div>	
 
 			</li>
-
 			<li class="catalog-item">
 				<img src="img/img-catalog/img-mishka.jpg" alt="Mishka" width="360" height="576"> 
 				<div class="catalog-item-info">
@@ -166,7 +163,6 @@
 					<a class="button" href="#">9 900 руб.</a>
 				</div>	
 			</li>
-
 			<li class="catalog-item">
 				<img src="img/img-catalog/img-aplus.jpg" alt="A plus" width="360" height="576"> 
 				<div class="catalog-item-info">
@@ -175,7 +171,6 @@
 					<a class="button" href="#">9 900 руб.</a>
 				</div>
 			</li>
-
 			<li class="catalog-item">
 				<img src="img/img-catalog/img-kvast.jpg" alt="KVAST" width="360" height="576"> 
 				<div class="catalog-item-info">
