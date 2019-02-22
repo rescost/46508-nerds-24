@@ -63,11 +63,13 @@ h1 {
 
 .main-navigation {
 	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	padding-top: 49px;
 }
 
 .site-logo {
-	width: 300px;
-	padding-top: 49px;
+	width: 160px;
 }
 
 .site-logo:hover,
@@ -84,8 +86,8 @@ h1 {
 	width: 440px;
 	justify-content: space-between;
     list-style-type: none;
-    margin: 0 200px 0 60px;
-    padding: 75px 0 0 0;
+    margin: 0;
+    padding: 26px 0 0 0;
     
 }
 
@@ -117,7 +119,7 @@ h1 {
 	justify-content: flex-end;
 	width: 160px;
 	margin: 0;
-	padding: 75px 0 0 0;
+	padding: 26px 0 0 0;
 	list-style-type: none;
 }
 
@@ -278,11 +280,24 @@ h1 {
 
 /* БЛОК НАШИ УСЛУГИ */
 
+.our-services {
+	position: relative;
+	padding-bottom: 80px;
+}
+
+.our-services:after {
+	content: "";
+    position: absolute;
+    bottom: -2px;
+    width: 1160px;
+    background-color: inherit;
+    border-top: 2px solid #eeeeee;
+}
 
 .our-services-inner {
 	display: flex;
 	padding: 0;
-	margin-top: 80px;
+	margin: 80px 0 0 0;
 	list-style-type: none;
 }
 
@@ -311,6 +326,7 @@ h1 {
 .our-services-item p {
 	font-size: 16px;
 	line-height: 24px;
+	width: 260px;
 	margin: 0 0 33px 0;
 }
 
@@ -373,8 +389,6 @@ h1 {
 	box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.1);
 }
 
-
-
 .our-services hr {
     height: 2px;
     margin: 80px 0 0 0;
@@ -385,13 +399,13 @@ h1 {
 .our-studio {
 	display: flex;
 	flex-wrap: wrap;
-	margin: 0 0 45px 0;
+	padding: 0 0 70px 0;
 }
 
 .our-studio-description {
 	width: 660px;
 	margin-right: 140px;
-	margin-top: 73px;
+	margin-top: 75px;
 }
 
 .our-studio-description span {
@@ -408,40 +422,48 @@ h1 {
 	font-size: 16px;
 	text-transform: uppercase;
 	font-weight: bold;
-	margin: 40px 0 25px 0;
+	margin: 40px 0 23px 0;
 }
 
-.our-studio-numbers {
-	display: flex;
-	flex-wrap: wrap;
-	width: 345px;
-	list-style-type: none;
+.our-studio-number {
+	width: 360px;
 	padding: 0;
 	margin-top: 30px;
-	justify-content: space-between;
 }
 
-.our-studio-numbers sup {
-	top: -15px;
-    right: 12px;
-    font-size: 65%;
+.our-studio-number caption {
+	text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 55px;
 }
 
-.our-studio-numbers span {
+.our-studio-number thead {
 	font-size: 45px;
-	line-height: 10.06px;
-	font-weight: bold;
+    line-height: 10.06px;
+    font-weight: bold;
+    color: #000000;
+    text-align: left;
 }
 
-.our-studio-numbers li:last-child span {
-	margin-right: 20px;
+.our-studio-number th {
+	padding-right: 13px;
+	padding-bottom: 36px;
 }
 
-.our-studio-numbers p {
-	font-size: 16px;
+.our-studio-number sup {
+    font-size: 60%;
+}
+
+.our-studio-number td {
+	padding-top: 0;
+    padding-bottom: 19px;
+    padding-right: 20px;
+    font-size: 16px;
 	line-height: 18px;
-	margin-top: 35px;
+	color: #283136;
 }
+
 
 .we-development {
 	list-style-type: none;
@@ -478,8 +500,30 @@ h1 {
 
 .our-partners-inner {
 	display: flex;
+	flex-wrap: nowrap;
+	justify-content: space-between;
 	list-style-type: none;
+	position: relative;
 	padding: 30px 0 20px 0;
+	margin: 0;
+}
+
+.our-partners-inner:after {
+	content: "";
+    position: absolute;
+    bottom: -17px;
+    width: 1160px;
+    background-color: inherit;
+    border-bottom: 2px solid #eeeeee;
+}
+
+.our-partners-inner:before {
+	content: "";
+    position: absolute;
+    top: -20px;
+    width: 1160px;
+    background-color: inherit;
+    border-top: 2px solid #eeeeee;
 }
 
 .our-partners-inner li {
@@ -487,7 +531,22 @@ h1 {
     justify-content: center;
     display: flex;
     align-items: center;
+    position: relative;
     margin-right: 40px;
+}
+
+.our-partners-inner li:after {
+	content: "";
+	position: absolute;
+	height: 52px;
+	right: -20px;
+	vertical-align: middle;
+	background-color: inherit;
+	border-right: 2px solid #eeeeee;
+}
+
+.our-partners-inner li:last-child:after {
+	display: none;
 }
 
 .our-partners-inner img {
@@ -508,41 +567,31 @@ h1 {
 	margin-right: 0;
 }
 
-.our-partners hr {
-	height: 2px;
-    border: none;
-    background-color: #eeeeee;
-}
-
 .our-partners {
-	margin-bottom: 80px;
+	padding-bottom: 97px;
 }
 
 /* Карта в подвале */
 
 .site-footer-map {
-	background: url('../img/img-general/footer-map.jpg') center no-repeat;
-	background-color: #eeeeee;
-	
+	padding-bottom: 64px;
 }
 
-.site-footer-map-contacts {
-	width: 1440px;
-	height: 416px;
+.site-footer-map-contacts { 
+	max-width: 1200px;
+	/* Ширину задаём для того, чтобы блок контактов одинаково
+	смотрелся на всех разрешениях от 1200px */
 	position: relative;
 	margin: 0 auto;
 }
 
-.map-maker {
-	position: absolute;
-	bottom: 138px;
-	left: 820px;
-
+.site-footer-map iframe {
+	width: 100%;
 }
 
 .our-contacts-block {
-	position: relative;
-	left: 140px;
+	position: absolute;
+	left: 20px;
 	top: 54px;
 	width: 320px;
 	padding: 50px;
@@ -550,7 +599,7 @@ h1 {
 }
 
 .our-contacts-block .strong {
-	margin: 0 0 23px 0;
+	margin: 0 0 21px 0;
 	text-transform: uppercase;
 	font-weight: bold;
 	font-size: 18px;
@@ -567,7 +616,7 @@ h1 {
 .site-footer-map-button {
 	display: block;
 	width: 220px;
-	margin-top: 36px;
+	margin-top: 38px;
 	padding: 16px 0;
 	line-height: 18px;
 	color: #ffffff;
@@ -604,6 +653,7 @@ h1 {
 
 .social-icon-item a {
   display: flex;
+  align-items: center;
   width: 79px;
   height: 79px;
   position: relative;
@@ -613,21 +663,30 @@ h1 {
 }
 
 .social-icon-item a::before {
-  display: flex;
+  display: block;
   align-items: center;
   margin: 0 auto;
 }
 
 .sc-vk a::before {
-  content: url('../img/img-general/vk-icon.svg');
+  content: "";
+  background: url('../img/img-general/vk-icon.svg') center no-repeat;
+  width: 26px;
+  height: 15px;
 }
 
 .sc-fb a::before {
-  content: url('../img/img-general/fb-icon.svg');
+  content: "";
+  background: url('../img/img-general/fb-icon.svg') center no-repeat;
+  width: 12px;
+  height: 22px;
 }
 
 .sc-insta a::before {
-  content: url('../img/img-general/insta-icon.svg');
+  content: "";
+  background: url('../img/img-general/insta-icon.svg') center no-repeat;
+  width: 21px;
+  height: 21px;
 }
 
 .social-icon-item a:hover,
@@ -648,13 +707,14 @@ h1 {
 
 .footer-contacts {
 	display: flex;
-	flex-wrap: wrap;
-	margin: 69px auto;
+	flex-wrap: nowrap;
+	margin: 0 auto; 
+	padding-bottom: 70px;
 }
 
 .site-footer-action span {
 	display: block;
-	margin: 8px 0 10px 0;
+	margin: 7px 0 10px 0;
 	font-size: 36px;
 	line-height: 36px;
 	font-weight: bold;
@@ -1228,11 +1288,13 @@ h1 {
 	position: fixed;
     width: 960px;
     bottom: 170px;
-    left: 450px;
+    left: 50%;
+    transform: translateX(-50%);
     background-color: #ffffff;
     box-shadow: 0px 0 25px 0 rgba(0,0,0,0.25);
     margin: 20px;
     padding: 70px 100px 85px 100px;
+    z-index: 999; /*Иначе перекрывается переключателем слайдов */
 }
 
 .form-write-us form {
@@ -1458,3 +1520,4 @@ h1 {
 .button-close:active:after {
 	background-color: #ffeeee;
 }
+
