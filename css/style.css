@@ -2,12 +2,14 @@
 
 /* GLOBAL STYLES */
 
-html { 
+html {
 	box-sizing: border-box;
 }
 
-*, *::before, *::after { 
-	box-sizing: inherit; 
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
 }
 
 body {
@@ -39,10 +41,12 @@ h1 {
 }
 
 .visually-hidden {
-	position: absolute; 
-	width: 1px; /*Не 0, потому что 0 - это по сути display:none;*/
+	position: absolute;
+	width: 1px;
+	/*Не 0, потому что 0 - это по сути display:none;*/
 	height: 1px;
-	margin: -1px; /*компенсирует на всякий случай этот 1px)*/
+	margin: -1px;
+	/*компенсирует на всякий случай этот 1px)*/
 	border: none;
 	padding: 0;
 	clip: rect(0 0 0 0);
@@ -55,7 +59,6 @@ h1 {
 
 
 /* ШАПКА САЙТА */
-
 
 .site-header {
 	background-color: #eeeeee;
@@ -74,25 +77,23 @@ h1 {
 
 .site-logo:hover,
 .site-logo:focus {
- opacity: 0.8;
+	opacity: 0.8;
 }
 
 .site-logo:active {
- opacity: 0.3;
+	opacity: 0.3;
 }
 
 .header-navigation {
 	display: flex;
 	width: 440px;
 	justify-content: space-between;
-    list-style-type: none;
-    margin: 0;
-    padding: 26px 0 0 0;
-    
+	list-style-type: none;
+	margin: 0;
+	padding: 26px 0 0 0;
 }
 
 .header-navigation a {
-
 	text-transform: uppercase;
 	font-size: 16px;
 	line-height: 30px;
@@ -106,7 +107,7 @@ h1 {
 }
 
 .header-navigation a:active {
-	color: rgba(0,0,0,0.3);
+	color: rgba(0, 0, 0, 0.3);
 }
 
 .current-nav {
@@ -137,7 +138,7 @@ h1 {
 }
 
 .basket a:active {
-	color: rgba(0,0,0,0.3);
+	color: rgba(0, 0, 0, 0.3);
 }
 
 .basket a:before {
@@ -145,6 +146,7 @@ h1 {
 	padding-right: 25px;
 	vertical-align: middle;
 }
+
 
 /* Слайдер - главная */
 
@@ -196,8 +198,8 @@ h1 {
 
 .homepage-slider-item p {
 	max-width: 430px;
-    margin: 0 0 38px 0;
-    line-height: 24px;
+	margin: 0 0 38px 0;
+	line-height: 24px;
 }
 
 .homepage-slider-nav {
@@ -214,31 +216,31 @@ h1 {
 
 .homepage-slider-nav i {
 	position: relative;
-    display: inline-block;
-    width: 18px;
-    height: 18px;
-    padding: 8px;
-    border-radius: 50%;
-    cursor: pointer;
-    box-sizing: content-box;
-    vertical-align: top;
+	display: inline-block;
+	width: 18px;
+	height: 18px;
+	padding: 8px;
+	border-radius: 50%;
+	cursor: pointer;
+	box-sizing: content-box;
+	vertical-align: top;
 }
 
 .homepage-slider-nav i::after {
-  	content: "";
-  	position: absolute;
+	content: "";
+	position: absolute;
 	top: 8px;
- 	left: 8px;
+	left: 8px;
 	z-index: 1;
 	width: 18px;
-  	height: 18px;
+	height: 18px;
 	background: #ffffff;
- 	border-radius: 50%;
+	border-radius: 50%;
 }
 
 .homepage-slider-nav .active::before {
 	content: "";
- 	position: absolute;
+	position: absolute;
 	left: 50%;
 	top: 50%;
 	z-index: 2;
@@ -252,18 +254,19 @@ h1 {
 
 .homepage-slider-button {
 	display: block;
-    width: 240px;
-    padding: 16px 5px; /*5px, чтобы нормально смотрелось при увеличении длинны текста */
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 18px;
-    color: #ffffff;
-    text-transform: uppercase;
-    text-align: center;
-    text-decoration: none;
-    background-color: #fb565a;
-    border-radius: 3px;
-    border: none;
+	width: 240px;
+	padding: 16px 5px;
+	/*5px, чтобы нормально смотрелось при увеличении длинны текста */
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 18px;
+	color: #ffffff;
+	text-transform: uppercase;
+	text-align: center;
+	text-decoration: none;
+	background-color: #fb565a;
+	border-radius: 3px;
+	border: none;
 }
 
 .homepage-slider-button:hover,
@@ -273,8 +276,8 @@ h1 {
 
 .homepage-slider-button:active {
 	background-color: #d7373b;
-	color: rgba(255,255,255,0.3);
-	box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.1);
+	color: rgba(255, 255, 255, 0.3);
+	box-shadow: inset 0 3px 0 0 rgba(0, 0, 0, 0.1);
 }
 
 
@@ -287,11 +290,11 @@ h1 {
 
 .our-services:after {
 	content: "";
-    position: absolute;
-    bottom: -2px;
-    width: 1160px;
-    background-color: inherit;
-    border-top: 2px solid #eeeeee;
+	position: absolute;
+	bottom: -2px;
+	width: 1160px;
+	background-color: inherit;
+	border-top: 2px solid #eeeeee;
 }
 
 .our-services-inner {
@@ -320,7 +323,6 @@ h1 {
 	line-height: 30px;
 	margin: 0 0 15px 0;
 	text-transform: uppercase;
-
 }
 
 .our-services-item p {
@@ -333,18 +335,19 @@ h1 {
 .our-services-item .button {
 	display: block;
 	width: 160px;
-	padding: 16px 5px; /*5px, чтобы нормально смотрелось при увеличении длинны текста */
-    border-radius: 3px;
-    text-transform: uppercase;
-    font-size: 16px;
-    line-height: 18px;
-    text-align: center;
-    font-weight: 500;
-    color: #fff;
+	padding: 16px 5px;
+	/*5px, чтобы нормально смотрелось при увеличении длинны текста */
+	border-radius: 3px;
+	text-transform: uppercase;
+	font-size: 16px;
+	line-height: 18px;
+	text-align: center;
+	font-weight: 500;
+	color: #fff;
 }
 
 .our-services-item .button:active {
-	color: rgba(256,256,256,0.3);
+	color: rgba(256, 256, 256, 0.3);
 }
 
 .web-sites .button {
@@ -358,7 +361,7 @@ h1 {
 
 .web-sites .button:active {
 	background-color: #d7373b;
-	box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.1);
+	box-shadow: inset 0 3px 0 0 rgba(0, 0, 0, 0.1);
 }
 
 .apps .button {
@@ -372,7 +375,7 @@ h1 {
 
 .apps .button:active {
 	background-color: #00aa62;
-	box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.1);
+	box-shadow: inset 0 3px 0 0 rgba(0, 0, 0, 0.1);
 }
 
 .presentation .button {
@@ -386,14 +389,14 @@ h1 {
 
 .presentation .button:active {
 	background-color: #e5a722;
-	box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.1);
+	box-shadow: inset 0 3px 0 0 rgba(0, 0, 0, 0.1);
 }
 
 .our-services hr {
-    height: 2px;
-    margin: 80px 0 0 0;
-    border: none;
-    background-color: #eeeeee;
+	height: 2px;
+	margin: 80px 0 0 0;
+	border: none;
+	background-color: #eeeeee;
 }
 
 .our-studio {
@@ -433,17 +436,17 @@ h1 {
 
 .our-studio-number caption {
 	text-transform: uppercase;
-    font-weight: bold;
-    text-align: center;
-    padding-bottom: 55px;
+	font-weight: bold;
+	text-align: center;
+	padding-bottom: 55px;
 }
 
 .our-studio-number thead {
 	font-size: 45px;
-    line-height: 10.06px;
-    font-weight: bold;
-    color: #000000;
-    text-align: left;
+	line-height: 10.06px;
+	font-weight: bold;
+	color: #000000;
+	text-align: left;
 }
 
 .our-studio-number th {
@@ -452,18 +455,17 @@ h1 {
 }
 
 .our-studio-number sup {
-    font-size: 60%;
+	font-size: 60%;
 }
 
 .our-studio-number td {
 	padding-top: 0;
-    padding-bottom: 19px;
-    padding-right: 20px;
-    font-size: 16px;
+	padding-bottom: 19px;
+	padding-right: 20px;
+	font-size: 16px;
 	line-height: 18px;
 	color: #283136;
 }
-
 
 .we-development {
 	list-style-type: none;
@@ -510,29 +512,29 @@ h1 {
 
 .our-partners-inner:after {
 	content: "";
-    position: absolute;
-    bottom: -17px;
-    width: 1160px;
-    background-color: inherit;
-    border-bottom: 2px solid #eeeeee;
+	position: absolute;
+	bottom: -17px;
+	width: 1160px;
+	background-color: inherit;
+	border-bottom: 2px solid #eeeeee;
 }
 
 .our-partners-inner:before {
 	content: "";
-    position: absolute;
-    top: -20px;
-    width: 1160px;
-    background-color: inherit;
-    border-top: 2px solid #eeeeee;
+	position: absolute;
+	top: -20px;
+	width: 1160px;
+	background-color: inherit;
+	border-top: 2px solid #eeeeee;
 }
 
 .our-partners-inner li {
 	width: 260px;
-    justify-content: center;
-    display: flex;
-    align-items: center;
-    position: relative;
-    margin-right: 40px;
+	justify-content: center;
+	display: flex;
+	align-items: center;
+	position: relative;
+	margin-right: 40px;
 }
 
 .our-partners-inner li:after {
@@ -562,7 +564,6 @@ h1 {
 	opacity: 0.1;
 }
 
-
 .our-partners-inner li:last-child {
 	margin-right: 0;
 }
@@ -571,13 +572,14 @@ h1 {
 	padding-bottom: 97px;
 }
 
+
 /* Карта в подвале */
 
 .site-footer-map {
 	padding-bottom: 64px;
 }
 
-.site-footer-map-contacts { 
+.site-footer-map-contacts {
 	max-width: 1200px;
 	/* Ширину задаём для того, чтобы блок контактов одинаково
 	смотрелся на всех разрешениях от 1200px */
@@ -626,89 +628,92 @@ h1 {
 	background-color: #fb565a;
 	border: none;
 	border-radius: 3px;
-	
 }
 
-.site-footer-map-button:hover, /*В стайлгайде нету, но по аналогии с другими */
-.site-footer-map-button:focus {
+.site-footer-map-button:hover,
+.site-footer-map-button:focus
+/*В стайлгайде нету, но по аналогии с другими */ {
 	background-color: #e74246;
 }
 
-
 .site-footer-map-button:active {
 	background-color: #d7373b;
-	color: rgba(256,256,256,0.3);
+	color: rgba(256, 256, 256, 0.3);
 }
-
 
 
 /* Социальные иконки */
+
 .social-icons-container {
-  display: flex;
-  list-style-type: none;
-  padding: 0;
-  width: 260px;
-  margin: 0 140px 0 0;
+	display: flex;
+	list-style-type: none;
+	padding: 0;
+	width: 260px;
+	margin: 0 140px 0 0;
+}
+
+.social-icon-item {
+	margin-right: 12px;
 }
 
 .social-icon-item a {
-  display: flex;
-  align-items: center;
-  width: 79px;
-  height: 79px;
-  position: relative;
-  background-color: #e1e1e1;
-  border-radius: 50%;
-  margin-right: 12px;
+	display: flex;
+	align-items: center;
+	width: 79px;
+	height: 79px;
+	position: relative;
+	background-color: #e1e1e1;
+	border-radius: 50%;
 }
 
 .social-icon-item a::before {
-  display: block;
-  align-items: center;
-  margin: 0 auto;
+	display: block;
+	align-items: center;
+	margin: 0 auto;
 }
 
 .sc-vk a::before {
-  content: "";
-  background: url('../img/img-general/vk-icon.svg') center no-repeat;
-  width: 26px;
-  height: 15px;
+	content: "";
+	background: url('../img/img-general/vk-icon.svg') center no-repeat;
+	width: 26px;
+	height: 15px;
 }
 
 .sc-fb a::before {
-  content: "";
-  background: url('../img/img-general/fb-icon.svg') center no-repeat;
-  width: 12px;
-  height: 22px;
+	content: "";
+	background: url('../img/img-general/fb-icon.svg') center no-repeat;
+	width: 12px;
+	height: 22px;
 }
 
 .sc-insta a::before {
-  content: "";
-  background: url('../img/img-general/insta-icon.svg') center no-repeat;
-  width: 21px;
-  height: 21px;
+	content: "";
+	background: url('../img/img-general/insta-icon.svg') center no-repeat;
+	width: 21px;
+	height: 21px;
 }
 
 .social-icon-item a:hover,
 .social-icon-item a:focus {
-  background-color: #e74246;
+	background-color: #e74246;
 }
 
 .social-icon-item a:active {
-  background-color: #d7373b;
-  box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.1);
+	background-color: #d7373b;
+	box-shadow: inset 0 3px 0 0 rgba(0, 0, 0, 0.1);
 }
 
 .social-icon-item a:active::before {
-  opacity: 0.3;
+	opacity: 0.3;
 }
+
 
 /* Контакты - футер */
 
 .footer-contacts {
 	display: flex;
 	flex-wrap: nowrap;
-	margin: 0 auto; 
+	margin: 0 auto;
 	padding-bottom: 70px;
 }
 
@@ -726,8 +731,6 @@ h1 {
 	margin: 0;
 	padding: 0;
 }
-
-
 
 
 /* КАТАЛОГ - общие */
@@ -751,18 +754,17 @@ h1 {
 .catalog-content {
 	display: flex;
 	flex-direction: column;
-
 }
 
 .catalog-page h1 {
 	font-size: 55px;
-    line-height: 55px;
-    text-align: center;
-    background-color: #eeeeee;
-    margin: 0;
-    padding: 71px 0 109px 0;
-
+	line-height: 55px;
+	text-align: center;
+	background-color: #eeeeee;
+	margin: 0;
+	padding: 71px 0 109px 0;
 }
+
 
 /* Сайдбар - каталог */
 
@@ -841,7 +843,7 @@ h1 {
 	text-transform: uppercase;
 }
 
-.price-controls input {	
+.price-controls input {
 	width: 60px;
 	padding: 8px 10px;
 	margin-left: 10px;
@@ -857,6 +859,7 @@ h1 {
 .max-price {
 	text-align: right;
 }
+
 .filter-option {
 	margin-bottom: 20px;
 	padding-left: 35px;
@@ -881,7 +884,7 @@ h1 {
 	margin: 0 0 55px 0;
 }
 
-.filter-input-radio + label::before {
+.filter-input-radio+label::before {
 	content: "";
 	position: absolute;
 	top: -2px;
@@ -896,7 +899,7 @@ h1 {
 	opacity: 0.4;
 }
 
-.filter-input-radio:checked + label::before {
+.filter-input-radio:checked+label::before {
 	content: "";
 	position: absolute;
 	top: -2px;
@@ -904,14 +907,13 @@ h1 {
 	width: 25px;
 	height: 25px;
 	background-image: url('../img/img-catalog/radio-on.svg');
-	color: #a6a6a6;
 	background-repeat: no-repeat;
 	background-position: 0 0;
 	color: #4d4d4d;
 	opacity: 0.4;
 }
 
-.filter-input-checkbox + label::before {
+.filter-input-checkbox+label::before {
 	content: "";
 	position: absolute;
 	top: -2px;
@@ -926,7 +928,7 @@ h1 {
 	opacity: 0.4;
 }
 
-.filter-input-checkbox:checked + label::before {
+.filter-input-checkbox:checked+label::before {
 	content: "";
 	position: absolute;
 	top: -2px;
@@ -934,37 +936,25 @@ h1 {
 	width: 25px;
 	height: 25px;
 	background-image: url('../img/img-catalog/checkbox-on.svg');
-	color: #a6a6a6;
 	background-repeat: no-repeat;
 	background-position: 0 0;
 	color: #4d4d4d;
 	opacity: 0.4;
 }
 
-.filter-input + label:hover::before,
-.filter-input + label:focus::before {
+.filter-input+label:hover::before,
+.filter-input:focus+label::before {
 	color: #4d4d4d;
 	opacity: 1;
 }
 
-.filter-input:disabled + label {
-	color: rgba(40,49,54,0.3);
+.filter-input:disabled+label {
+	color: rgba(40, 49, 54, 0.3);
 }
 
-.filter-input:disabled + label::before {
+.filter-input:disabled+label::before {
 	color: #4d4d4d;
 	opacity: 0.1;
-}
-
-.filter-input:disabled + label:hover::before,
-.filter-input:disabled + label:focus::before {
-	color: #4d4d4d;
-	opacity: 1;
-}
-
-.filter-input:disabled + label:hover,
-.filter-input:disabled + label:focus {
-	color: rgba(40,49,54,1);
 }
 
 .price-filter {
@@ -988,6 +978,7 @@ h1 {
 .catalog-price {
 	margin-bottom: 55px;
 }
+
 
 /* Фильтр в шапке - Каталог */
 
@@ -1023,17 +1014,16 @@ h1 {
 	padding-right: 8px;
 }
 
-
 .type-sort a {
 	text-transform: uppercase;
 	font-size: 14px;
 	line-height: 18px;
-	color: rgba(0,0,0,0.3);
+	color: rgba(0, 0, 0, 0.3);
 }
 
 .type-sort a:hover,
 .type-sort a:focus {
-	color: rgba(0,0,0,0.6);
+	color: rgba(0, 0, 0, 0.6);
 }
 
 .type-sort a:active,
@@ -1102,10 +1092,9 @@ h1 {
 }
 
 .button-filter:active {
-	box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.1);
-	color: rgba(0,0,0,0.3);
+	box-shadow: inset 0 3px 0 0 rgba(0, 0, 0, 0.1);
+	color: rgba(0, 0, 0, 0.3);
 }
-
 
 
 /* Шаблоны - каталог */
@@ -1120,12 +1109,11 @@ h1 {
 .catalog-template li {
 	width: 360px;
 	margin: 0 40px 25px 0;
-
 }
 
 .catalog-template li:hover,
 .catalog-template li:focus {
-	box-shadow: 0px 6px 15px 0 rgba(0,0,0,0.25);
+	box-shadow: 0px 6px 15px 0 rgba(0, 0, 0, 0.25);
 	border-radius: 3px;
 }
 
@@ -1159,7 +1147,9 @@ h1 {
 .catalog-item-info {
 	position: absolute;
 	width: 360px;
-	top: 385px;
+	max-height: 576px;
+	overflow: auto;
+	bottom: 0;
 	padding: 0 60px;
 	background-color: #eeeeee;
 	text-align: center;
@@ -1187,13 +1177,14 @@ h1 {
 	display: block;
 	width: 200px;
 	margin: 31px auto 44px auto;
-	padding: 16px 5px; /*5px, чтобы нормально смотрелось при увеличении длинны текста */
+	padding: 16px 5px;
+	/*5px, чтобы нормально смотрелось при увеличении длинны текста */
 	line-height: 18px;
-    color: #ffffff;
-    background-color: #fb565a;
-    border: none;
-    text-transform: uppercase;
-    border-radius: 3px;
+	color: #ffffff;
+	background-color: #fb565a;
+	border: none;
+	text-transform: uppercase;
+	border-radius: 3px;
 }
 
 .catalog-item-info .button:hover,
@@ -1203,7 +1194,7 @@ h1 {
 
 .catalog-item-info .button:active {
 	background-color: #d7373b;
-	box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.1);
+	box-shadow: inset 0 3px 0 0 rgba(0, 0, 0, 0.1);
 }
 
 .catalog-item .catalog-item-info {
@@ -1219,8 +1210,8 @@ h1 {
 	visibility: visible;
 }
 
-/* ПАГИНАЦИЯ */
 
+/* ПАГИНАЦИЯ */
 
 .catalog-navigate {
 	display: flex;
@@ -1265,10 +1256,10 @@ h1 {
 
 .pagination-item a:active {
 	background-color: #d5d5d5;
-    border: none;
-    color: rgba(0,0,0,0.3);
-    padding: 16px 21px;
-    box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.1);
+	border: none;
+	color: rgba(0, 0, 0, 0.3);
+	padding: 16px 21px;
+	box-shadow: inset 0 3px 0 0 rgba(0, 0, 0, 0.1);
 }
 
 .pagipagination-active a {
@@ -1281,20 +1272,20 @@ h1 {
 }
 
 
-
 /* Форма напишите нам */
 
 .form-write-us {
 	position: fixed;
-    width: 960px;
-    bottom: 170px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #ffffff;
-    box-shadow: 0px 0 25px 0 rgba(0,0,0,0.25);
-    margin: 20px;
-    padding: 70px 100px 85px 100px;
-    z-index: 999; /*Иначе перекрывается переключателем слайдов */
+	width: 960px;
+	bottom: 170px;
+	left: 50%;
+	transform: translateX(-50%);
+	background-color: #ffffff;
+	box-shadow: 0px 0 25px 0 rgba(0, 0, 0, 0.25);
+	margin: 20px;
+	padding: 70px 100px 85px 100px;
+	z-index: 999;
+	/*Иначе перекрывается переключателем слайдов */
 }
 
 .form-write-us form {
@@ -1308,7 +1299,6 @@ h1 {
 	line-height: 18px;
 	font-weight: bold;
 	margin-bottom: 8px;
-
 }
 
 .form-write-us input::-webkit-input-placeholder,
@@ -1364,7 +1354,7 @@ h1 {
 	border-color: #e74246;
 }
 
-.form-write-us .is-invalid input:hover{
+.form-write-us .is-invalid input:hover {
 	border-color: #e74246;
 }
 
@@ -1430,17 +1420,14 @@ h1 {
 .form-write-us textarea:focus {
 	border-color: #000000;
 	outline: 0;
-} 
-
-.form-write-us input:focus,
-.form-write-us textarea:focus {
 	border-color: #444444;
 	color: #444444;
 }
 
 .form-write-us input[type=submit] {
 	width: 260px;
-	padding: 16px 5px; /*5px, чтобы нормально смотрелось при увеличении длинны текста */
+	padding: 16px 5px;
+	/*5px, чтобы нормально смотрелось при увеличении длинны текста */
 	background-color: #fb565a;
 	color: #fff;
 	text-transform: uppercase;
@@ -1456,7 +1443,7 @@ h1 {
 
 .form-write-us input[type=submit]:active {
 	background-color: #d7373b;
-	box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.1);
+	box-shadow: inset 0 3px 0 0 rgba(0, 0, 0, 0.1);
 }
 
 .form-write-us .user-name {
@@ -1482,13 +1469,13 @@ h1 {
 .button-close {
 	position: absolute;
 	width: 21px;
-    height: 21px;
-    top: 78px;
-    right: 90px;
-    font-size: 0;
-    border: none;
-    cursor: pointer;
-    background-color: transparent;
+	height: 21px;
+	top: 78px;
+	right: 90px;
+	font-size: 0;
+	border: none;
+	cursor: pointer;
+	background-color: transparent;
 }
 
 .button-close:before,
@@ -1496,17 +1483,17 @@ h1 {
 	content: "";
 	position: absolute;
 	width: 24px;
-  	height: 3px;
-  	left: 1px;
-  	background-color: #fecccd;
+	height: 3px;
+	left: 1px;
+	background-color: #fecccd;
 }
 
 .button-close:before {
-  transform: rotate(45deg);
+	transform: rotate(45deg);
 }
 
 .button-close:after {
-  transform: rotate(-45deg);
+	transform: rotate(-45deg);
 }
 
 .button-close:hover:before,
@@ -1520,4 +1507,3 @@ h1 {
 .button-close:active:after {
 	background-color: #ffeeee;
 }
-
