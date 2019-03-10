@@ -1397,19 +1397,23 @@ a {
 
 .form-write-us {
 	position: fixed;
+	display: none;
 	width: 960px;
-	bottom: 170px;
+	top: 50%;
 	left: 50%;
-	-webkit-transform: translateX(-50%);
-	    -ms-transform: translateX(-50%);
-	        transform: translateX(-50%);
+	-webkit-transform: translate(-50%,-50%);
+	    -ms-transform: translate(-50%,-50%);
+	        transform: translate(-50%,-50%);
 	background-color: #ffffff;
 	-webkit-box-shadow: 0px 0 25px 0 rgba(0, 0, 0, 0.25);
 	        box-shadow: 0px 0 25px 0 rgba(0, 0, 0, 0.25);
-	margin: 20px;
 	padding: 70px 100px 85px 100px;
 	z-index: 999;
 	/*Иначе перекрывается переключателем слайдов */
+}
+
+.form-write-us-show {
+	display: block;
 }
 
 .form-write-us form {
@@ -1532,7 +1536,7 @@ a {
 .form-write-us input,
 .form-write-us textarea {
 	width: 100%;
-	padding: 10px;
+	padding: 14px;
 	border: 2px solid #d7dcde;
 	border-radius: 3px;
 	color: #444444;
@@ -1575,23 +1579,29 @@ a {
 }
 
 .form-write-us .user-name {
-	width: 50%;
-	padding-right: 40px;
+	width: 360px;
+	margin: 0 40px 35px 0;
 }
 
 .form-write-us .email {
-	width: 50%
+	width: 360px;
+	margin: 0 0 35px 0;
 }
 
 .form-write-us .text-area {
 	width: 100%;
+	margin: 0 0 40px 0;
+}
+
+.form-write-us .button-submit {
+	margin: 0;
 }
 
 .form-write-us h2 {
 	font-size: 45px;
 	line-height: 45px;
 	font-weight: 500;
-	margin: 0 0 50px 0;
+	margin: 0 0 40px 0;
 }
 
 .button-close {
@@ -1610,8 +1620,8 @@ a {
 .button-close:after {
 	content: "";
 	position: absolute;
-	width: 24px;
-	height: 3px;
+	width: 27px;
+	height: 4px;
 	left: 1px;
 	background-color: #fecccd;
 }
